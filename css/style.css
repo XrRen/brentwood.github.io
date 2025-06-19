@@ -1,7 +1,6 @@
 /* ─────────── COLOR PALETTE ─────────── */
 :root {
     --color-primary: #006699;
-    /* your hero/header blue */
     --color-secondary: #65cccc;
 
 }
@@ -22,7 +21,6 @@
     font-size: 0.9rem;
 }
 
-/* === Centered container & flex layout === */
 .container {
     max-width: 1200px;
     height: 67px;
@@ -473,7 +471,6 @@
 
 .highlight {
     color: #2F5790;
-    /* your blue text color */
     font-size: 1.5rem;
     /* tweak as needed */
     line-height: 1.4;
