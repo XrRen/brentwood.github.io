@@ -411,7 +411,7 @@
 
 .testimonial {
     position: relative;
-    background-image: url('/asset/registered-nurse-960x540.jpg');
+    background-image: url('asset/registered-nurse-960x540.jpg');
     opacity: 0.8;
     background-size: cover;
     background-position: center;
