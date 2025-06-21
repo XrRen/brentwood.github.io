@@ -232,6 +232,19 @@
 
 /* done reusable */
 
+/* give your header/nav a higher stacking context */
+.main-header,
+.site-nav {
+    position: relative;
+    z-index: 10;
+}
+
+/* make sure the banner sits underneath */
+.hero-banner {
+    position: relative;
+    z-index: 1;
+}
+
 
 .hero-banner {
     background-image: url('../asset/abtUs.png');
@@ -310,7 +323,7 @@
     background-color: #f4f4f4;
     /* padding-left: 1rem; */
     text-align: left;
-    min-height: 350px;
+    min-height: 340px;
 }
 
 .facility-services .container {
@@ -354,19 +367,28 @@
     background: #fff;
 }
 
+
 .visiting-specialists .container {
-  display: grid;
-  /* two columns: left side for the heading/text, right side for the list */
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;              /* space between the two columns */
-  align-items: start;     /* align both columns at the top */
+    max-width: 87%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    margin-top: -60px;
+    display: grid;
+    /* two columns: left side for the heading/text, right side for the list */
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    /* space between the two columns */
+    align-items: start;
+    /* align both columns at the top */
 }
 
 /* ensure your doctors still stack vertically */
 .visiting-list {
-  display: flex;          
-  flex-direction: column; /* stack each .doctor on its own row */
-  gap: 1.5rem;            /* space between the doctor rows */
+    display: flex;
+    flex-direction: column;
+    /* stack each .doctor on its own row */
+    gap: 1.5rem;
+    /* space between the doctor rows */
 }
 
 
@@ -376,8 +398,10 @@
 }
 
 .visiting-text h2 {
+    font-family: 'Segoe UI', Verdana, sans-serif;
     font-size: 2rem;
     margin-bottom: 0.5rem;
+    padding-bottom: 5px;
 }
 
 .visiting-text,
@@ -386,30 +410,39 @@
 }
 
 .visiting-text p {
-    color: #555;
-    line-height: 1.6;
+    font-family: 'Segoe UI', Verdana, sans-serif;
+    color: #717171;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 22px;
 }
 
 
 .visiting-list .doctor h3 {
     margin: 0;
-    font-size: 1.1rem;
+    font-family: 'Segoe UI', Verdana, sans-serif;
+    font-size: 1.4rem;
     color: #000;
 }
 
 .visiting-list .doctor .day,
 .visiting-list .doctor .phone {
     margin: 0.25rem 0 0;
-    color: #666;
-    font-size: 0.95rem;
-    line-height: 1.4;
+    font-family: 'Segoe UI', Verdana, sans-serif;
+    color: #717171;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.2;
 }
 
 
+/* style_abt.css */
 .contact {
-    background-color: #f4f4f4;
-    height: 150px;
+  background-color: #f4f4f4;
+  /* remove height: 150px; */
+  padding: 4rem 1rem;    /* 4rem top & bottom, 1rem sides — adjust as you like */
 }
+
 
 .cta-container {
     display: flex;
