@@ -31,7 +31,7 @@
     flex-wrap: wrap;
     /* allow wrapping on small screens */
     justify-content: space-between;
-    /* align-items: center; */
+    align-items: center;
 }
 
 /* === Left side list === */
@@ -230,169 +230,196 @@
     }
 }
 
-.image-container {
-    position: relative;
-    width: 100%;
-    /* full width of any monitor/screen */
-    height: 550px;
-    /* fixed height as required */
-    overflow: hidden;
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
-
-}
-
-.swap-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-
-    /* Drop shadow */
-
-}
+/* done reusable */
 
 
-.swap-image.active {
-    opacity: 1;
-}
+.hero-banner {
+    background-image: url('../asset/abtUs.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* show the full photo, no cropping */
+    /* drop the “fixed” attachment unless you really want parallax */
 
-.caption {
-    position: absolute;
-    bottom: -100px;
-    left: 0;
-    width: 100%;
-    padding: 1rem;
-    color: #fff;
-    text-align: center;
-    transition: bottom 1s ease-in-out;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.5));
-}
+    /* pick an explicit height (px, %, or vh) */
+    height: 500px;
+    /* or max-height: 50vh; */
 
-.caption.visible {
-    bottom: 5px;
-}
-
-.caption h2 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-
-}
-
-.caption p {
-    font-size: 1.5rem;
-    line-height: 1.4;
-}
-
-
-.feature-area {
-    padding: 4rem 1rem;
-    /* vertical space */
-    margin-bottom: 4rem;
-
-    /* space after the line */
-}
-
-.feature-area .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;
-}
-
-.text-col {
-    flex: 1;
-}
-
-.text-col h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    font-family: 'Segoe UI', Verdana, sans-serif;
-}
-
-.text-col p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #676767;
-    margin-bottom: 1.5rem;
-    font-family: 'Segoe UI', Verdana, sans-serif;
-}
-
-/* 4. Image column */
-.image-col {
-    flex: 1;
-}
-
-.image-col img {
-    width: 100%;
-    height: 100;
-    display: block;
-}
-
-.split-list {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #676767;
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem 2rem;
-    margin-top: 2rem;
-    padding: 0;
-}
-
-.split-list li {
-    position: relative;
-    padding-left: 2rem;
-    line-height: 1.4;
-}
-
-.split-list li::before {
-    content: "\f00c";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 1.5rem;
-    height: 1.5rem;
-    border: 1px solid #ccc;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #65cccc;
+    margin-top: -125px;
+    filter: drop-shadow(1px 3px 6px black);
+}
+
+
+/* About-Section */
+.about-section {
+    margin-top: -125px;
+    padding-top: 4rem;
+    text-align: left;
+    height: 375px;
+}
+
+.about-section .container {
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.about-section h2 {
+    margin-top: -100px;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    font-family: system-ui;
+    position: relative;
+    /* establish a positioning context */
+    display: inline-block;
+}
+
+.about-section h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #2F5790;
+    margin-top: 1rem;
+    /* space between heading and bar */
+}
+
+
+.underlineA {
+    margin: 0 0rem 2rem 8rem;
+    /* top/right/bottom/left */
+}
+
+.about-section p {
+    color: #717171;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    font-family: 'Segoe UI', Verdana, sans-serif;
+    font-size: 1.2rem;
+    line-height: 22px;
+}
+
+.facility-services {
+    /* margin-top: -150px; */
+    /* margin-top: 100px; */
+    background-color: #f4f4f4;
+    /* padding-left: 1rem; */
+    text-align: left;
+    min-height: 350px;
+}
+
+.facility-services .container {
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.facility-services h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: left;
+    font-family: system-ui;
+    position: relative;
+    /* establish a positioning context */
+    display: inline-block;
+}
+
+.facility-services p {
+    color: #717171;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    font-family: 'Segoe UI', Verdana, sans-serif;
+    font-size: 1.2rem;
+    line-height: 22px;
 }
 
 .section-divider {
-    margin-top: 351px;
-    border: 0.5px solid black;
-    width: 100%;
+    border: 0.2px solid rgb(202, 202, 202);
+    width: 82.5%;
+    position: absolute;
+    margin-top: 212px;
+    margin-left: 128px;
 }
 
-/* 7. Responsive stack */
-@media (max-width: 768px) {
-    .feature-area .container {
-        flex-direction: column;
-    }
+.visiting-specialists {
+    padding: 4rem 1rem;
+    background: #fff;
+}
 
-    .split-list {
-        grid-template-columns: 1fr;
-    }
+.visiting-specialists .container {
+  display: grid;
+  /* two columns: left side for the heading/text, right side for the list */
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;              /* space between the two columns */
+  align-items: start;     /* align both columns at the top */
+}
+
+/* ensure your doctors still stack vertically */
+.visiting-list {
+  display: flex;          
+  flex-direction: column; /* stack each .doctor on its own row */
+  gap: 1.5rem;            /* space between the doctor rows */
+}
+
+
+/* left column text */
+.visiting-text {
+    flex: 1 1 40%;
+}
+
+.visiting-text h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.visiting-text,
+.visiting-list {
+    min-width: 0;
+}
+
+.visiting-text p {
+    color: #555;
+    line-height: 1.6;
+}
+
+
+.visiting-list .doctor h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #000;
+}
+
+.visiting-list .doctor .day,
+.visiting-list .doctor .phone {
+    margin: 0.25rem 0 0;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+
+.contact {
+    background-color: #f4f4f4;
+    height: 150px;
 }
 
 .cta-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: -80px;
-    margin-bottom: 30px;
+    margin-top: 50px;
+    margin-bottom: 70px;
     gap: 8rem;
     padding: 1rem 1rem 2rem;
+
 }
 
 .cta-container a {
@@ -402,7 +429,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Common button styling */
 .cta-btn {
     flex: 1 1 300px;
     max-width: 600px;
@@ -424,180 +450,18 @@
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-#footer-divider {
-    border: 0.5px solid black;
+/* override the fixed 67px height for everything except top-bar */
+.top-bar .container {
+    height: 67px;
 }
 
-.testimonial {
-    position: relative;
-    background-image: url('../asset/slide2.jpg');
-    opacity: 0.8;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    text-align: center;
-    overflow: hidden;
+.visiting-specialists .container {
+    height: auto;
 }
 
 
-/* the inner wrapper for text—keeps it above the overlay */
-.testimonial-content {
-    position: relative;
-    max-width: 800px;
-    padding: 2rem;
-}
-
-/* quote icon */
-.quote-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-/* the quote itself */
-.quote {
-    font-style: italic;
-    font-size: 1.75rem;
-    line-height: 1.4;
-    margin: 0 auto 1.5rem;
-}
-
-/* small centered divider */
-.quote-divider {
-    width: 50px;
-    border: none;
-    border-top: 2px solid #fff;
-    margin: 0 auto 1rem;
-}
-
-/* author text */
-.author {
-    font-weight: 500;
-    letter-spacing: 0.5px;
-}
-
-.highlights .container {
-    margin-top: 60px;
-    margin-bottom: 60px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(282.5px, 1fr));
-    gap: 10rem;
-}
-
-.highlight {
-    color: #2F5790;
-    font-size: 1.5rem;
-    /* tweak as needed */
-    line-height: 1.4;
-    text-align: left;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-}
-
-.team-header {
-    max-width: 1000px;
-    /* cap its width */
-    margin: 0 auto 2.5rem;
-    /* center it, push grid down */
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-}
-
-.team-header h2 {
-    font-size: 2rem;
-    margin-top: 4.5rem;
-}
-
-.team-header .section-underline {
-    width: 50px;
-    height: 3px;
-    background-color: #2F5790;
-    margin: 0.5rem auto 1.5rem;
-}
-
-.team-header .section-subtitle {
-    color: #666;
-    line-height: 1.4;
-    font-size: 1.2rem;
-    text-align: center;
-    padding: auto;
-    max-width: 120%;
-}
-
-.team-grid {
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
-    gap: 2rem;
-}
-
-.team-grid.container {
-    min-height: 130px;
-}
-
-
-.team-card {
-    flex-direction: column;
-    background: #fff;
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.team-image {
-    height: 250px;
-    /* pick your ideal height */
-    overflow: hidden;
-}
-
-/* make the <img> fill that box, crop the bottom, and align the top */
-.team-image img {
-    display: block;
-    /* remove any inline‐baseline quirks */
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* fill the box by cropping */
-    object-position: center;
-    /* make sure the *top* of each photo shows */
-}
-
-.team-card h3 {
-    margin: 1rem;
-    font-size: 1.1rem;
-}
-
-.team-card p {
-    margin: 0 1rem 1.5rem;
-    /* remove flex-grow entirely (or set it to 0) */
-    flex-grow: 0;
-    color: #666;
-    font-size: 0.9rem;
-    line-height: 1.4;
-}
-
-.read-more {
-    display: inline-block;
-    margin: 0 1rem 1rem;
-    padding: 0.6rem 1rem;
-    background-color: #65cccc;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    text-align: center;
-    transition: background-color 0.2s;
-}
-
-.read-more:hover {
-    background-color: #4bb3b3;
-}
-
+/*                                                           reusable                                                     */
 .info-section {
-    margin-top: 400px;
     width: 100%;
     background: #333;
     color: #fff;
@@ -608,7 +472,7 @@
 
 .info-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(158px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
