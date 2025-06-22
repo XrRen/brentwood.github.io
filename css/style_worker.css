@@ -1,0 +1,150 @@
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    /* title left, breadcrumb right */
+    align-items: baseline;
+    /* align text bottoms */
+    max-width: 1275px;
+    /* match your other sections */
+    margin: 3rem auto;
+    /* center & give vertical space */
+    padding: 0 1rem;
+    /* same side gutters */
+}
+
+/* Title styling */
+.profile-header__title {
+    margin: 0;
+    color: #111;
+    font-size: 1.6rem;
+}
+
+/* Breadcrumb styling */
+.profile-header__breadcrumbs {
+    font-size: 0.875rem;
+    color: #777;
+    white-space: nowrap;
+    /* keep on one line */
+}
+
+.profile-header__breadcrumbs a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.profile-header__breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+/* separator spacing */
+.profile-header__breadcrumbs .separator {
+    margin: 0 0.5rem;
+}
+
+.doctor-profile {
+    display: flex;
+    align-items: flex-start;
+    /* top–align both columns */
+    gap: 2rem;
+    /* space between columns */
+    max-width: 1275px;
+    /* or whatever your main width is */
+    margin: 0rem auto 3rem;
+    /* center & add vertical spacing */
+    padding: 0 1rem;
+    /* side gutters */
+}
+
+/* Left column: size it to the thumbnail width */
+.profile-left {
+    flex: 0 0 400px;
+    
+    min-width: 250px;
+}
+
+/* Right column: fluid text area */
+.profile-right {
+    margin-top: 2rem;
+    flex: 1;
+    /* take up remaining space */
+    color: #555;
+    line-height: 1.3;
+    font-size: 1.1rem;
+}
+
+/* (Re-use your thumbnail + hover styles) */
+.thumb {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.thumb img {
+    display: block;
+    width: 100%;
+    transition: opacity 0.3s;
+    
+}
+
+.thumb .name {
+  position: static;      /* no more absolute overlay */
+  margin-top: 0.5rem;    /* push it down below the image */
+  background: #efefef;
+  color: #000;
+  padding: 1rem;
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+  margin-top: -0.5px;
+}
+
+
+.thumb:hover img {
+    opacity: 0.6;
+}
+
+.thumb:hover .name {
+    background: #3fb4bc;
+    color: #fff;
+}
+
+/* Modal overlay */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.modal-img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 5px solid #fff;
+    border-radius: 4px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+
+/* Responsiveness: stack at narrow widths */
+@media (max-width: 700px) {
+    .doctor-profile {
+        flex-direction: column;
+    }
+
+    .profile-left {
+        flex: none;
+        margin-bottom: 2rem;
+    }
+}
