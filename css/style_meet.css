@@ -1,0 +1,184 @@
+.hero-banner {
+    width: 100vw;
+    /* full viewport width */
+    height: 55vh;
+    /* pick a height: 60% of viewport height */
+    background-image: url("../asset/meet.png");
+    background-size: cover;
+    /* scale & crop to fill */
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(1px 3px 6px black);
+}
+
+.team-section {
+    max-width: 1250px;
+    /* same width as your other sections */
+    margin: 0.6rem auto 1rem;
+    /* vertical spacing + center */
+    padding: 0 1.5rem;
+    /* same side gutters */
+    color: #555;
+    /* a slightly softer gray for body text */
+    line-height: 1.6;
+    font-family: Geneva, Verdana, sans-serif;
+}
+
+/* Re-use your blue-underline style */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+    color: #111;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 50px;
+    height: 2px;
+    background: #2F5790;
+}
+
+.team-section p {
+    margin-top: 1.5rem;
+    font-family: Geneva, Verdana, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+
+/* 1. Grid container */
+.providers__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    max-width: 1250px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+}
+
+/* 2. Card basics */
+.provider-card {
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+/* 3. Clickable image */
+
+
+/* 4. Name styling */
+.provider-card__name {
+    margin: -3rem 1rem 2.4rem;
+    font-family: Geneva, Verdana, sans-serif;
+    font-size: 0.85rem;
+}
+
+.provider-card__name a {
+    text-decoration: none;
+    color: #111;
+}
+
+.provider-card__name a:hover {
+    text-decoration: underline;
+}
+
+/* 5. Bio */
+.provider-card__bio {
+    flex-grow: 1;
+    margin: 0 1rem 1rem;
+    color: #555;
+    line-height: 1.2;
+    line-break: strict;
+    font-family: Geneva, Verdana, sans-serif;
+    font-size: 0.8rem;
+}
+
+/* 6. “Read more” button */
+.provider-card__btn {
+    margin: 0 1rem 1rem;
+    padding: 0.75rem;
+    text-align: center;
+    background: #5dcad4;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.provider-card__btn:hover {
+    background: #4bb6b0;
+}
+
+.provider-card__thumb {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    margin: 0;
+}
+
+.provider-card__thumb img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* thin black divider lines */
+.divider {
+    border: none;
+    border-top: 1px solid #000;
+    margin: 0;
+}
+
+/* full-width container (light grey bg is optional) */
+.cta-buttons {
+    background: #f7f7f7;
+}
+
+/* center & constrain the buttons */
+.cta-buttons__inner {
+    max-width: 1250px;
+    /* match your other sections */
+    margin: 0rem auto;
+    /* space above/below */
+    padding: 3rem 1rem 4rem;
+    /* same side gutters */
+    display: flex;
+    gap: 1rem;
+    /* space between the two buttons */
+    flex-wrap: wrap;
+    /* stacks on narrow screens */
+}
+
+/* both links look like big buttons */
+.btn {
+    display: block;
+    flex: 1;
+    /* share available space equally */
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+/* primary style */
+.btn--primary {
+    background: #2F5790;
+    color: #fff;
+}
+
+.btn--primary:hover,
+.btn--primary:focus {
+    background: #244e7d;
+}

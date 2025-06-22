@@ -1,0 +1,103 @@
+/* page container */
+.appointment-page {
+    max-width: 1280px;
+    margin: 3rem 7.5rem 0rem;
+    padding: 0 1rem;
+    font-family: 'Segoe UI', Verdana, sans-serif;
+    font-size: x-large;
+    color: #111;
+    line-height: 1.5;
+}
+
+/* section title + underline */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    /* small gap under text */
+    left: 0;
+    width: 50px;
+    /* underline length */
+    height: 2px;
+    /* underline thickness */
+    background: #2F5790;
+}
+
+/* spacing for paragraphs */
+.contact-info {
+    font-family: 'Segoe UI', Verdana, sans-serif;
+    width: 100%;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    /*  */
+}
+
+/* gallery wrapper sits below and uses the same max-width */
+.photo-gallery {
+    max-width: 850px;
+    margin: auto;
+    margin-top: -50px;
+    /* same top/bottom spacing as appointment block */
+    padding: 0 1rem;
+    /* same left/right gutters */
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+/* each image fills the container and keeps its aspect ratio */
+.photo-gallery img {
+    display: block;
+    /* remove inline-image whitespace */
+    width: 100%;
+    /* fill the gallery’s width */
+    height: auto;
+    /* preserve aspect ratio */
+    object-fit: cover;
+    /* if you ever set a fixed height, this will crop nicely */
+    border: #e6e6e6 5px solid;
+}
+
+/* match the same max-width & padding as your gallery */
+.directions-container {
+    max-width: 1215px;
+    margin: 0.7rem auto 1rem;
+    /* space above/below */
+    padding: 0 1rem;
+    /* same side gutters */
+}
+
+/* turn the link into a full-width button */
+.btn-directions {
+    display: block;
+    /* fills the container width */
+    width: 100%;
+    /* full width */
+    text-align: center;
+    text-decoration: none;
+    /* no underline */
+    padding: 1.2rem 0;
+    /* vertical padding */
+    background-color: #2F5790;
+    /* your signature blue */
+    color: #fff;
+    /* white text */
+    font-size: 1.125rem;
+    font-weight: 500;
+    border-radius: 6px;
+    /* gently rounded corners */
+}
+
+/* hover / focus state */
+.btn-directions:hover,
+.btn-directions:focus {
+    background-color: #244e7d;
+    /* a slightly darker blue */
+}
