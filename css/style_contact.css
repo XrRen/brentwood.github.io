@@ -61,11 +61,9 @@
     height: auto;
     /* preserve aspect ratio */
     object-fit: cover;
-    /* if you ever set a fixed height, this will crop nicely */
     border: #e6e6e6 5px solid;
 }
 
-/* match the same max-width & padding as your gallery */
 .directions-container {
     max-width: 1215px;
     margin: 0.7rem auto 1rem;
@@ -86,7 +84,6 @@
     padding: 1.2rem 0;
     /* vertical padding */
     background-color: #2F5790;
-    /* your signature blue */
     color: #fff;
     /* white text */
     font-size: 1.125rem;

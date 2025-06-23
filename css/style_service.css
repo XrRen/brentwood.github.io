@@ -6,7 +6,6 @@
     background-repeat: no-repeat;
     background-size: contain;
     /* show the full photo, no cropping */
-    /* drop the “fixed” attachment unless you really want parallax */
 
     /* pick an explicit height (px, %, or vh) */
     min-height: 420px;
@@ -112,7 +111,6 @@
 /* center & constrain the buttons */
 .sta-buttons__inner {
     max-width: 1250px;
-    /* match your other sections */
     margin: 0rem auto;
     /* space above/below */
     padding: 3rem 1rem 4rem;

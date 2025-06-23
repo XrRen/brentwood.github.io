@@ -105,7 +105,6 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     max-width: 1250px;
-    /* match your content width */
     margin: 2rem auto 0;
     padding: 0 1rem;
     color: #000000;
@@ -150,7 +149,6 @@
 /* center & constrain the buttons */
 .sta-buttons__inner {
     max-width: 1250px;
-    /* match your other sections */
     margin: 0rem auto;
     /* space above/below */
     padding: 3rem 1rem 4rem;

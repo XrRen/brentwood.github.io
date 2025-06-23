@@ -13,7 +13,6 @@
 
 .team-section {
     max-width: 1250px;
-    /* same width as your other sections */
     margin: 0.6rem auto 1rem;
     /* vertical spacing + center */
     padding: 0 1.5rem;
@@ -24,7 +23,6 @@
     font-family: Geneva, Verdana, sans-serif;
 }
 
-/* Re-use your blue-underline style */
 .section-title {
     font-size: 2rem;
     margin-bottom: 0.5rem;
@@ -146,7 +144,6 @@
 /* center & constrain the buttons */
 .cta-buttons__inner {
     max-width: 1250px;
-    /* match your other sections */
     margin: 0rem auto;
     /* space above/below */
     padding: 3rem 1rem 4rem;
