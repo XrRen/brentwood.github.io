@@ -1,0 +1,150 @@
+.hero-banner {
+    position: relative;
+    z-index: -1;
+    background-image: url('../asset/abtUs.png');
+    background-position: 50% 75%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* show the full photo, no cropping */
+    /* drop the “fixed” attachment unless you really want parallax */
+
+    /* pick an explicit height (px, %, or vh) */
+    min-height: 420px;
+    /* or max-height: 50vh; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -130px;
+    filter: drop-shadow(1px 3px 6px black);
+}
+
+/* thin black divider lines */
+.divider {
+    border: none;
+    border-top: 1px solid #000;
+    margin: 0rem 0;
+}
+
+/* wrapper for the services overview */
+.services-overview {
+    font-family: Geneva, Verdana, sans-serif;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    color: #121212;
+    line-height: 1.6;
+}
+
+/* large heading */
+.services-overview__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* paragraph text */
+.services-overview__text {
+    font-size: 1.1rem;
+    margin: 0.7rem auto 0
+}
+
+.services-section {
+    font-family: Geneva, Verdana, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1250px;
+    margin: 2rem auto 5rem;
+    padding: 0 1rem;
+}
+
+.services-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+/* Reset the list & add checkmark bullets */
+.service-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.service-list li {
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 1rem;
+    color: #737373;
+    line-height: 1.7;
+    
+}
+
+/* Circular checkmark via ::before */
+.service-list li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 0em;
+    width: 1.2em;
+    height: 1.2em;
+    border: 2px solid #b3dffc;
+    border-radius: 50%;
+    color: #2F5790;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 1.2em;
+}
+
+/* The right-column image */
+.services-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border: #f1f1f1 6px solid;
+}
+
+.sta-buttons {
+    background: #f7f7f7;
+}
+
+/* center & constrain the buttons */
+.sta-buttons__inner {
+    max-width: 1250px;
+    /* match your other sections */
+    margin: 0rem auto;
+    /* space above/below */
+    padding: 3rem 1rem 4rem;
+    /* same side gutters */
+    display: flex;
+    gap: 1rem;
+    /* space between the two buttons */
+    flex-wrap: wrap;
+    /* stacks on narrow screens */
+}
+
+/* both links look like big buttons */
+.stn {
+    display: block;
+    flex: 1;
+    /* share available space equally */
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+/* primary style */
+.stn--primary {
+    background: #2F5790;
+    color: #fff;
+}
+
+.stn--primary:hover,
+.stn--primary:focus {
+    background: #244e7d;
+}

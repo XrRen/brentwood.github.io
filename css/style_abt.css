@@ -1,39 +1,11 @@
-/* ─────────── COLOR PALETTE ─────────── */
-:root {
-    --color-primary: #006699;
-    --color-secondary: #65cccc;
-
-}
-
-
-/* === Reset some defaults === */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/* === Top bar background & text color === */
-
-/* done reusable */
-
-/* give your header/nav a higher stacking context */
-.main-header,
-.site-nav {
-    position: relative;
-    z-index: 10;
-}
-
-/* make sure the banner sits underneath */
 .hero-banner {
     position: relative;
-    z-index: 1;
+    z-index: -1;
     background-image: url('../asset/abtUs.png');
     background-position: 50% 75%;
     background-repeat: no-repeat;
     background-size: contain;
     /* show the full photo, no cropping */
-    /* drop the “fixed” attachment unless you really want parallax */
 
     /* pick an explicit height (px, %, or vh) */
     min-height: 420px;
@@ -42,363 +14,175 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -125px;
+    margin-top: -130px;
     filter: drop-shadow(1px 3px 6px black);
 }
 
-
-/* About-Section */
-.about-section {
-    margin-top: -20px; /* smaller negative margin */
-    padding-top: 2rem;
-    height: 343px;
+/* horizontal rules */
+.divider {
+    border: none;
+    border-top: 1px solid #c5c5c5;
+    width: 1225px;
+    margin: 0rem auto 0;
+    /* center on the page */
 }
 
-.about-section .container {
-    max-width: 85%;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+/* wrapper for the about‐us text */
+.about-us {
+    max-width: 1250px;
+    margin: -30px auto 0;
+    /* center on the page */
+    padding: 0 1rem;
+    /* same side gutters */
+    color: #000000;
+    /* a softer gray for body text */
+    font-family: Geneva, Verdana, sans-serif;
 }
 
-.about-section h2 {
-    margin-top: -100px;
-    font-size: 2rem;
+/* the heading + blue underline */
+.about-us .section-title {
+    font-size: 1.6rem;
     margin-bottom: 0.5rem;
-    text-align: left;
-    font-family: system-ui;
     position: relative;
-    /* establish a positioning context */
     display: inline-block;
 }
 
-.about-section h2::after {
+.about-us .section-title::after {
     content: "";
-    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -25px;
     width: 50px;
-    height: 3px;
-    background-color: #2F5790;
-    margin-top: 1rem;
-    /* space between heading and bar */
+    height: 2px;
+    background: #2F5790;
 }
 
-
-.underlineA {
-    margin: 0 0rem 2rem 8rem;
-    /* top/right/bottom/left */
-}
-
-.about-section p {
-    color: #717171;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    text-align: left;
-    font-family: 'Segoe UI', Verdana, sans-serif;
+/* spacing for paragraphs */
+.about-us p {
+    margin: 2rem 0 0.9rem;
     font-size: 1.2rem;
-    line-height: 22px;
+    color: rgb(92, 92, 92);
 }
 
 .facility-services {
-    /* margin-top: -150px; */
-    /* margin-top: 100px; */
-    background-color: #f4f4f4;
-    /* padding-left: 1rem; */
-    text-align: left;
-    min-height: 340px;
+    background: none;
+    padding: 0;
+    background: #f5f5f5;
 }
 
-.facility-services .container {
-    max-width: 85%;
+.fs__inner {
+    max-width: 1250px;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    /* center it */
+
+    padding: 2.3rem 1rem;
+    /* vertical + side gutters */
+    box-sizing: border-box;
+    max-width: 1250px;
+    color: #000000;
+    /* a softer gray for body text */
+    font-family: Geneva, Verdana, sans-serif;
 }
 
-.facility-services h2 {
-    font-size: 2rem;
+.facility-services .section-title {
+    font-size: 1.6rem;
     margin-bottom: 0.5rem;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    text-align: left;
-    font-family: system-ui;
     position: relative;
-    /* establish a positioning context */
     display: inline-block;
 }
 
+/* spacing for paragraphs */
 .facility-services p {
-    color: #717171;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    text-align: left;
-    font-family: 'Segoe UI', Verdana, sans-serif;
+    margin: 2rem 0 0.9rem;
     font-size: 1.2rem;
-    line-height: 22px;
+    color: rgb(92, 92, 92);
 }
 
-.section-divider {
-    border: 0.2px solid rgb(202, 202, 202);
-    width: 82.5%;
-    position: absolute;
-    margin-top: 212px;
-    margin-left: 128px;
-}
 
+/* 2. Grid layout for two columns */
 .visiting-specialists {
-    padding: 4rem 1rem;
-    background: #fff;
-}
-
-
-.visiting-specialists .container {
-    max-width: 87%;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    margin-top: -60px;
     display: grid;
-    /* two columns: left side for the heading/text, right side for the list */
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    /* space between the two columns */
-    align-items: start;
-    /* align both columns at the top */
+    max-width: 1250px;
+    /* match your content width */
+    margin: 2rem auto 0;
+    padding: 0 1rem;
+    color: #000000;
+    /* a softer gray for body text */
+    font-family: Geneva, Verdana, sans-serif;
 }
 
-/* ensure your doctors still stack vertically */
-.visiting-list {
-    display: flex;
-    flex-direction: column;
-    /* stack each .doctor on its own row */
-    gap: 1.5rem;
-    /* space between the doctor rows */
-}
-
-
-/* left column text */
-.visiting-text {
-    flex: 1 1 40%;
-}
-
-.visiting-text h2 {
-    font-family: 'Segoe UI', Verdana, sans-serif;
-    font-size: 2rem;
+/* 3. Intro column */
+.visiting-specialists__intro .section-title {
+    font-size: 1.6rem;
     margin-bottom: 0.5rem;
-    padding-bottom: 5px;
+    position: relative;
+    display: inline-block;
 }
 
-.visiting-text,
-.visiting-list {
-    min-width: 0;
-}
 
-.visiting-text p {
-    font-family: 'Segoe UI', Verdana, sans-serif;
-    color: #717171;
-    text-align: left;
+.visiting-specialists__intro p {
+    margin: 1rem 0 0.9rem;
     font-size: 1.2rem;
-    line-height: 22px;
+    color: rgb(92, 92, 92);
 }
 
+/* 4. Specialists list */
+.visiting-specialists__list .specialist {
+    margin-bottom: 2rem;
+}
 
-.visiting-list .doctor h3 {
+.visiting-specialists__list .specialist h3 {
+    font-size: 1.2rem;
     margin: 0;
-    font-family: 'Segoe UI', Verdana, sans-serif;
-    font-size: 1.4rem;
-    color: #000;
+    color: #111;
 }
-
-.visiting-list .doctor .day,
-.visiting-list .doctor .phone {
-    margin: 0.25rem 0 0;
-    font-family: 'Segoe UI', Verdana, sans-serif;
-    color: #717171;
-    text-align: left;
+.visiting-specialists__list .specialist p {
     font-size: 1.2rem;
-    line-height: 1.2;
-}
-
-
-/* style_abt.css */
-.contact {
-  background-color: #f4f4f4;
-  /* remove height: 150px; */
-  padding: 0.1rem 0.1rem;
-}
-
-
-.cta-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 50px;
-    margin-bottom: 70px;
-    gap: 8rem;
-
-}
-
-.cta-container a {
-    width: 100%;
-    text-align: center;
-    font-size: 1.2rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.cta-btn {
-    flex: 1 1 300px;
-    max-width: 600px;
-    background-color: #006699;
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 6px;
-    font-size: 1.1rem;
-    line-height: 1.4;
-}
-
-/* Hover state */
-.cta-btn:hover {
-    background-color: #254a7a;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* override the fixed 67px height for everything except top-bar */
-.top-bar .container {
-    height: 67px;
-}
-
-.visiting-specialists .container {
-    height: auto;
-    padding: 2rem 1rem;
-}
-
-
-/*                                                           reusable                                                     */
-.info-section {
-    width: 100%;
-    background: #333;
-    color: #fff;
-    padding: 4rem 1rem;
-    box-sizing: border-box;
-    height: 300px;
-}
-
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(158px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.info-block h3 {
-    margin-bottom: 0.5rem;
-    font-size: 1.25rem;
-}
-
-.underline {
-    width: 50px;
-    height: 3px;
-    background: #2F5790;
-    margin-bottom: 1rem;
-}
-
-.info-block p {
-    line-height: 1.5;
-    font-size: 0.95rem;
-}
-
-.contact-list {
-    list-style: none;
-    padding: 0;
-}
-
-.contact-list li {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.75rem;
-    font-size: 0.95rem;
-}
-
-.hours-box {
-    background: #2F5790;
-    padding: 1.5rem;
-    border-radius: 6px;
-}
-
-.hours-list .hours-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 0;
-    font-size: 0.95rem;
-}
-
-.hours-list hr {
-    border: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    margin: 0.25rem 0;
-}
-
-.site-footer {
-    background: #111;
-    color: #fff;
-    padding: 1.5rem 1rem;
-    font-size: 0.9rem;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.footer-left {
-    flex: 1 1 275px;
-    text-align: left;
-    margin-top: 5px;
-}
-
-.footer-nav {
-    margin-left: 400px;
-    margin-top: -10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 1.5rem;
-
-}
-
-.footer-nav a {
-    white-space: nowrap;
     margin: 0;
-    padding: 0.25rem 0;
+    color: rgb(92, 92, 92);
+}
+.sta-buttons {
+    background: #f7f7f7;
 }
 
-
-.footer-nav a:hover {
-    text-decoration: underline;
+/* center & constrain the buttons */
+.sta-buttons__inner {
+    max-width: 1250px;
+    /* match your other sections */
+    margin: 0rem auto;
+    /* space above/below */
+    padding: 3rem 1rem 4rem;
+    /* same side gutters */
+    display: flex;
+    gap: 1rem;
+    /* space between the two buttons */
+    flex-wrap: wrap;
+    /* stacks on narrow screens */
 }
 
-.footer-right {
-    flex: 1 1 1px;
-    text-align: right;
-}
-
-.footer-right a {
-    color: #fff;
-    margin-left: 1rem;
-    font-size: 1.1rem;
+/* both links look like big buttons */
+.stn {
+    display: block;
+    flex: 1;
+    /* share available space equally */
+    text-align: center;
     text-decoration: none;
+    padding: 1rem 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background 0.2s;
 }
 
-.scroll-top {
-    cursor: pointer;
+/* primary style */
+.stn--primary {
+    background: #2F5790;
+    color: #fff;
 }
 
-/* Optional: smooth scroll behavior */
-html {
-    scroll-behavior: smooth;
+.stn--primary:hover,
+.stn--primary:focus {
+    background: #244e7d;
 }

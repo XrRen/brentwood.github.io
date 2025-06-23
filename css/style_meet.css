@@ -159,7 +159,7 @@
 }
 
 /* both links look like big buttons */
-.btn {
+.stn {
     display: block;
     flex: 1;
     /* share available space equally */
@@ -173,12 +173,12 @@
 }
 
 /* primary style */
-.btn--primary {
+.stn--primary {
     background: #2F5790;
     color: #fff;
 }
 
-.btn--primary:hover,
-.btn--primary:focus {
+.stn--primary:hover,
+.stn--primary:focus {
     background: #244e7d;
 }
