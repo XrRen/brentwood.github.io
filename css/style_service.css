@@ -1,21 +1,16 @@
 .hero-banner {
+    width: 100vw;
+    /* full viewport width */
+    height: 30vh;
+    /* pick a height: 60% of viewport height */
+    background-image: url("../asset/meet.png");
+    background-size: cover;
+    /* scale & crop to fill */
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(1px 3px 6px black);
     position: relative;
     z-index: -1;
-    background-image: url('../asset/abtUs.png');
-    background-position: 50% 75%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    /* show the full photo, no cropping */
-
-    /* pick an explicit height (px, %, or vh) */
-    min-height: 420px;
-    /* or max-height: 50vh; */
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -130px;
-    filter: drop-shadow(1px 3px 6px black);
 }
 
 /* thin black divider lines */
@@ -29,7 +24,7 @@
 .services-overview {
     font-family: Geneva, Verdana, sans-serif;
     max-width: 1250px;
-    margin: 0 auto;
+    margin: 3rem auto 0;
     padding: 0 1rem;
     color: #121212;
     line-height: 1.6;
@@ -76,7 +71,7 @@
     margin-bottom: 1rem;
     color: #737373;
     line-height: 1.7;
-    
+
 }
 
 /* Circular checkmark via ::before */
@@ -145,4 +140,95 @@
 .stn--primary:hover,
 .stn--primary:focus {
     background: #244e7d;
+}
+
+@media (max-width: 1024px) {
+    .hero-banner {
+        height: 40vh;
+    }
+
+    .services-overview__title {
+        font-size: 1.3rem;
+    }
+
+    .services-overview__text {
+        font-size: 1rem;
+    }
+
+    .services-section {
+        gap: 1.5rem;
+    }
+
+    .service-list li {
+        font-size: 1rem;
+        padding-left: 2.5rem;
+    }
+
+    .sta-buttons__inner {
+        padding: 2rem 1rem 3rem;
+    }
+
+    .stn {
+        font-size: 1rem;
+        padding: 0.9rem 0;
+    }
+}
+
+/* Tablets & small desktops */
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 30vh;
+    }
+
+    .services-overview {
+        padding: 0 1rem;
+    }
+
+    .services-section {
+        grid-template-columns: 1fr;
+    }
+
+    .services-img {
+        margin-top: 0.5rem;
+    }
+
+    .sta-buttons__inner {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .stn {
+        font-size: 0.95rem;
+        padding: 0.8rem 0;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .hero-banner {
+        height: 255vh;
+    }
+
+    .services-overview__title {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .services-overview__text {
+        font-size: 0.9rem;
+    }
+
+    .service-list li {
+        font-size: 0.9rem;
+        padding-left: 2rem;
+    }
+
+    .sta-buttons__inner {
+        padding: 1.5rem 1rem 2.5rem;
+    }
+
+    .stn {
+        font-size: 0.8rem;
+        padding: 0.6rem 0;
+    }
 }

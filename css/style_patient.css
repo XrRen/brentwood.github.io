@@ -276,3 +276,33 @@
     color: #2F5790;
     font-size: 0.8em;
 }
+@media (max-width: 1024px) {
+    .hero-banner { min-height: 300px; margin-top: -80px; }
+    .section-title { font-size: 1.75rem; }
+    .team-section p { font-size: 1.1rem; }
+    .prep-text { font-size: 1.3rem; }
+    .providers__grid { gap: 0.75rem; }
+    .provider-card__name { font-size: 0.9rem; }
+    .provider-card__bio { font-size: 0.8rem; }
+}
+
+@media (max-width: 768px) {
+    .hero-banner { min-height: 250px; margin-top: 0; }
+    .prep-inner { flex-direction: column; }
+    .prep-left, .prep-right { flex: 1 1 auto; }
+    .patient-billing-section { grid-template-columns: 1fr; }
+    .insurance-grid { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+    .coverage-section { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+    .cta-buttons__inner { flex-direction: column; }
+    .stn-primary { font-size: 0.9rem; }
+}
+
+@media (max-width: 480px) {
+    .hero-banner { min-height: 200px; }
+    .section-title { font-size: 1.5rem; bottom: -10px; }
+    .team-section p { font-size: 1rem; line-height: 1.4; }
+    .prep-text { font-size: 1.1rem; }
+    .provider-card__name { font-size: 0.8rem; }
+    .provider-card__bio { font-size: 0.7rem; }
+    .stn-primary { font-size: 0.8rem; padding: 0.5rem 0; }
+}

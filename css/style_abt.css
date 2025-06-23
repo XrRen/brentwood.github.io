@@ -1,21 +1,16 @@
 .hero-banner {
+    width: 100vw;
+    /* full viewport width */
+    height: 30vh;
+    /* pick a height: 60% of viewport height */
+    background-image: url("../asset/meet.png");
+    background-size: cover;
+    /* scale & crop to fill */
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(1px 3px 6px black);
     position: relative;
     z-index: -1;
-    background-image: url('../asset/abtUs.png');
-    background-position: 50% 75%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    /* show the full photo, no cropping */
-
-    /* pick an explicit height (px, %, or vh) */
-    min-height: 420px;
-    /* or max-height: 50vh; */
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -130px;
-    filter: drop-shadow(1px 3px 6px black);
 }
 
 /* horizontal rules */
@@ -137,11 +132,13 @@
     margin: 0;
     color: #111;
 }
+
 .visiting-specialists__list .specialist p {
     font-size: 1.2rem;
     margin: 0;
     color: rgb(92, 92, 92);
 }
+
 .sta-buttons {
     background: #f7f7f7;
 }
@@ -183,4 +180,87 @@
 .stn--primary:hover,
 .stn--primary:focus {
     background: #244e7d;
+}
+
+.divider {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+
+.about-us,
+.fs__inner,
+.visiting-specialists,
+.sta-buttons__inner {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+}
+
+@media (max-width: 1024px) {
+    .hero-banner {
+       height: 40vh;
+    }
+
+    .about-us .section-title,
+    .facility-services .section-title,
+    .visiting-specialists__intro .section-title {
+        font-size: 1.4rem;
+        /* slightly smaller headings */
+        bottom: -18px;
+        /* adjust underline */
+    }
+
+    .about-us p,
+    .facility-services p,
+    .visiting-specialists__intro p,
+    .visiting-specialists__list .specialist p {
+        font-size: 1.1rem;
+        margin: 1.5rem 0 0.7rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 30vh;
+    }
+
+    .visiting-specialists {
+        grid-template-columns: 1fr;
+    }
+
+    .sta-buttons__inner {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem 1rem 3rem;
+    }
+
+    .about-us p,
+    .facility-services p,
+    .visiting-specialists__intro p,
+    .visiting-specialists__list .specialist p {
+        font-size: 1rem;
+    }
+
+    .fs__inner {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-banner {
+        height: 25vh;
+    }
+
+    .about-us .section-title,
+    .facility-services .section-title,
+    .visiting-specialists__intro .section-title {
+        font-size: 1.2rem;
+        bottom: -15px;
+    }
+
+    .fs__inner {
+        padding: 1.5rem 0.75rem;
+    }
 }

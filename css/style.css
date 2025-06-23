@@ -187,7 +187,7 @@
     margin-right: -40px;
     /* pulls it an extra 2rem from the right edge */
     margin-top: -90px;
-    
+
 }
 
 
@@ -263,7 +263,7 @@
 
 .caption {
     position: absolute;
-    bottom: -100px;
+    bottom: -150px;
     left: 0;
     width: 100%;
     padding: 1rem;
@@ -725,4 +725,70 @@
 /* Optional: smooth scroll behavior */
 html {
     scroll-behavior: smooth;
+}
+
+.coverage-section {
+    display: grid;
+    /* each column will be at least 280px wide,
+     and as many will fit in the row as possible */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.coverage-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Tablet: switch to two columns */
+@media (max-width: 900px) {
+    .coverage-section {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Phone: single column */
+@media (max-width: 600px) {
+    .coverage-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    /* size & look */
+    width: 48px;
+    height: 48px;
+    background: rgba(128, 128, 128, 0.8);
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    /* center the arrow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* hide by default */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1000;
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
 }
