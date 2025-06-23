@@ -25,7 +25,7 @@
 /* wrapper for the about‐us text */
 .about-us {
     max-width: 1250px;
-    margin: -30px auto 0;
+    margin: 1rem auto 0;
     /* center on the page */
     padding: 0 1rem;
     /* same side gutters */
@@ -54,9 +54,10 @@
 
 /* spacing for paragraphs */
 .about-us p {
-    margin: 2rem 0 0.9rem;
+    margin: 2rem 0 0;
     font-size: 1.2rem;
     color: rgb(92, 92, 92);
+    line-height: 1.2;
 }
 
 .facility-services {
