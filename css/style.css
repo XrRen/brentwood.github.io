@@ -204,7 +204,7 @@
     object-fit: cover;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-
+    filter: drop-shadow(1px 3px 6px black);
     /* Drop shadow */
 
 }
@@ -212,6 +212,7 @@
 
 .swap-image.active {
     opacity: 1;
+    filter: drop-shadow(1px 3px 6px black);
 }
 
 .caption {
@@ -243,138 +244,170 @@
 }
 
 
-.feature-area {
-    padding: 4rem 1rem;
-    /* vertical space */
-    margin-bottom: 4rem;
-
-    /* space after the line */
+.services-section {
+    padding: 2rem auto 0;
+    font-family: Geneva, Verdana, sans-serif;
+    margin: 1.2rem auto 0;
 }
 
-.feature-area .container {
-    max-width: 1200px;
+.Scontainer {
     margin: 0 auto;
     display: flex;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 3rem;
 }
 
-.text-col {
-    flex: 1;
+/* LEFT COLUMN */
+.services-content {
+    flex: 1 1 0;
+    margin: 2rem auto 0 8rem;
+
 }
 
-.text-col h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    font-family: 'Segoe UI', Verdana, sans-serif;
-}
-
-.text-col p {
-    font-size: 1.2rem;
+.services-content h2 {
+    font-size: 1.7rem;
     line-height: 1.6;
-    color: #676767;
-    margin-bottom: 1.5rem;
-    font-family: 'Segoe UI', Verdana, sans-serif;
+    margin-bottom: 1rem;
 }
 
-/* 4. Image column */
-.image-col {
-    flex: 1;
+.services-content .lead {
+    color: #555;
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
 }
 
-.image-col img {
-    width: 100%;
-    height: 100;
-    display: block;
-}
-
-.split-list {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #676767;
+/* GRID LIST */
+.services-list {
     list-style: none;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem 2rem;
-    margin-top: 2rem;
     padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem 2rem;
 }
 
-.split-list li {
-    position: relative;
-    padding-left: 2rem;
-    line-height: 1.4;
-}
-
-.split-list li::before {
-    content: "\f00c";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 1.5rem;
-    height: 1.5rem;
-    border: 1px solid #ccc;
-    border-radius: 50%;
+.services-list li {
     display: flex;
     align-items: center;
+    font-size: 1.15rem;
+    color: #444;
+}
+
+.check-icon {
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-    color: #65cccc;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.5em;
+    border: 2px solid #b8c2cc;
+    border-radius: 50%;
+    color: #2F5790;
+    /* green check */
+    font-size: 0.9em;
 }
 
-.section-divider {
-    margin-top: 351px;
-    border: 0.5px solid black;
-    width: 100%;
+/* RIGHT COLUMN */
+.services-image {
+    flex: 1.3 1 0;
+    text-align: right;
 }
 
-.cta-container {
+.services-image img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .services-section {
+        padding: 2rem 1rem;
+        margin: 0 auto;
+    }
+
+    .Scontainer {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-image {
+        width: 100%;
+        display: none;
+    }
+
+    .services-content {
+        width: 100%;
+        margin: 1rem 3rem 5rem;
+    }
+
+    .services-content h2 {
+        width: 100%;
+        font-size: 1.3rem;
+    }
+}
+
+.cta-buttons {
+
+    background: #f7f7f7;
+}
+
+/* center & constrain the buttons */
+.cta-buttons__inner {
+    max-width: 1250px;
+    margin: 0rem auto;
+    /* space above/below */
+    padding: 3rem 1rem 4rem;
+    /* same side gutters */
     display: flex;
-    justify-content: center;
+    gap: 1rem;
+    /* space between the two buttons */
     flex-wrap: wrap;
-    margin-top: -80px;
-    margin-bottom: 30px;
-    gap: 8rem;
-    padding: 1rem 1rem 2rem;
+    /* stacks on narrow screens */
 }
 
-.cta-container a {
-    width: 100%;
+/* both links look like big buttons */
+.ctn {
+    display: block;
+    flex: 1;
+    /* share available space equally */
     text-align: center;
-    font-size: 1.2rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Common button styling */
-.cta-btn {
-    flex: 1 1 300px;
-    max-width: 600px;
-    background-color: #006699;
-    color: #fff;
     text-decoration: none;
-    text-align: center;
-    padding: 1rem;
+    padding: 1rem 0;
+    font-size: 1.125rem;
+    font-weight: 500;
     border-radius: 6px;
-    font-size: 1.1rem;
-    line-height: 1.4;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: background-color 0.2s, box-shadow 0.2s;
+    transition: background 0.2s;
 }
 
-/* Hover state */
-.cta-btn:hover {
-    background-color: #254a7a;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+/* primary style */
+.ctn--primary {
+    background: #2F5790;
+    color: #fff;
 }
 
-#footer-divider {
-    border: 0.5px solid black;
+.ctn--primary:hover,
+.ctn--primary:focus {
+    background: #244e7d;
+}
+
+@media (max-width: 768px) {
+    .cta-buttons__inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 3.4rem;
+    }
+
+    .ctn {
+        font-size: 1rem;
+        padding: 1.25rem 0;
+    }
 }
 
 .testimonial {
     position: relative;
-    background-image: url('../asset/slide2.jpg');
-    opacity: 0.8;
+    background-image: url('/asset/slide2.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -382,64 +415,213 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
     text-align: center;
     overflow: hidden;
+    color: #fff;
 }
 
+.testimonial::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
 
-/* the inner wrapper for text—keeps it above the overlay */
 .testimonial-content {
     position: relative;
-    max-width: 800px;
+    max-width: 1000px;
     padding: 2rem;
 }
 
-/* quote icon */
 .quote-icon {
     font-size: 3rem;
+    line-height: 1;
     margin-bottom: 1rem;
 }
 
-/* the quote itself */
 .quote {
     font-style: italic;
-    font-size: 1.75rem;
+    font-size: 1.7rem;
     line-height: 1.4;
     margin: 0 auto 1.5rem;
 }
 
-/* small centered divider */
 .quote-divider {
     width: 50px;
+    margin: 0 auto 1rem;
     border: none;
     border-top: 2px solid #fff;
-    margin: 0 auto 1rem;
 }
 
-/* author text */
 .author {
     font-weight: 500;
     letter-spacing: 0.5px;
 }
 
-.highlights .container {
-    margin-top: 60px;
-    margin-bottom: 60px;
+@media (max-width: 768px) {
+    .testimonial {
+        min-height: 50vh;
+    }
+
+    .testimonial-content {
+        padding: 1rem;
+    }
+
+    .quote {
+        font-size: 1.25rem;
+    }
+
+    .quote-icon {
+        font-size: 2.5rem;
+    }
+}
+
+.info {
+    background: #fff;
+    padding: 3rem 1rem;
+}
+
+/* constrain & layout */
+.info .container {
+    max-width: 1250px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(282.5px, 1fr));
-    gap: 10rem;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start;
+    /* top-align in case any text wraps */
+    gap: 4.5rem;
 }
 
-.highlight {
-    color: #2F5790;
-    font-size: 1.5rem;
-    /* tweak as needed */
+/* each column */
+.info-item {
+    flex: 1;
+    /* three columns with gap */
+    /* equal width */
+    text-align: lefts;
+}
+
+/* text styling */
+.info-item p {
+    font-family: Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: #2654a5;
+    /* match your blue */
+    font-size: 1.4rem;
+    font-weight: 500;
     line-height: 1.4;
-    text-align: left;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
+
+@media (max-width: 768px) {
+    .info .container {
+        grid-template-columns: 1fr;
+        /* stack into one column */
+        /* make children fill the width */
+        gap: 1.5rem;
+    }
+
+    .info-item {
+        float: left;
+        width: 100%;
+        /* full-width row */
+    }
+
+    .info-item p {
+        margin: 0 auto 1.2rem;
+        text-align: left;
+    }
+}
+
+/* CSS */
+.background {
+    background: #f7f7f7;
+    padding: 3rem 1rem;
+    /* space around the content */
+}
+
+.meet-team .container {
+    max-width: 1250px;
+    margin: 0.6rem auto 1rem;
+    /* vertical spacing + center */
+    padding: 3rem 1.5rem;
+    /* same side gutters */
+    color: #555;
+    /* a slightly softer gray for body text */
+    line-height: 1.6;
+    font-family: Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.meet-team h2 {
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+
+    color: #111;
+    margin-bottom: 1rem;
+}
+
+.meet-team h2::after {
+    content: "";
+    position: absolute;
+    margin-left: 575px;
+
+    left: 0;
+    bottom: -15px;
+    width: 50px;
+    height: 2px;
+    background: #2F5790;
+}
+
+/* Paragraphs */
+.meet-team p {
+    margin: 0.5rem 0;
+    color: #555;
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+.meet-team {
+    padding: 0rem 1rem 5rem;
+    /* space around the content */
+}
+
+@media (max-width: 600px) {
+    .meet-team {
+        padding: 0rem 1rem;
+    }
+
+    .meet-team h2 {
+        font-size: 1.75rem;
+    }
+
+    .meet-team p {
+        font-size: 1rem;
+    }
+
+    .meet-team {
+        margin-bottom: 7rem;
+    }
+
+    #messOne {
+        margin-top: 15rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .team-header {
     max-width: 1000px;
@@ -556,128 +738,6 @@
     object-position: center;
 }
 
-.info-section {
-    width: 100%;
-    background: #333;
-    color: #fff;
-    padding: 4rem 1rem;
-    box-sizing: border-box;
-    height: 300px;
-}
-
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.info-block h3 {
-    margin-bottom: 0.5rem;
-    font-size: 1.25rem;
-}
-
-.underline {
-    width: 50px;
-    height: 3px;
-    background: #2F5790;
-    margin-bottom: 1rem;
-}
-
-.info-block p {
-    line-height: 1.5;
-    font-size: 0.95rem;
-}
-
-.contact-list {
-    list-style: none;
-    padding: 0;
-}
-
-.contact-list li {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.75rem;
-    font-size: 0.95rem;
-}
-
-.hours-box {
-    background: #2F5790;
-    padding: 1.5rem;
-    border-radius: 6px;
-}
-
-.hours-list .hours-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 0;
-    font-size: 0.95rem;
-}
-
-.hours-list hr {
-    border: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    margin: 0.25rem 0;
-}
-
-.site-footer {
-    background: #111;
-    color: #fff;
-    padding: 1.5rem 1rem;
-    font-size: 0.9rem;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.footer-left {
-    flex: 1 1 275px;
-    text-align: left;
-    margin-top: 5px;
-}
-
-.footer-nav {
-    margin-left: 400px;
-    margin-top: -10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 1.5rem;
-
-}
-
-.footer-nav a {
-    white-space: nowrap;
-    margin: 0;
-    padding: 0.25rem 0;
-}
-
-
-.footer-nav a:hover {
-    text-decoration: underline;
-}
-
-.footer-right {
-    flex: 1 1 1px;
-    text-align: right;
-}
-
-.footer-right a {
-    color: #fff;
-    margin-left: 1rem;
-    font-size: 1.1rem;
-    text-decoration: none;
-}
-
 .scroll-top {
     cursor: pointer;
 }
@@ -719,45 +779,302 @@ html {
     visibility: visible;
 }
 
-/* === Responsive tweaks === */
-@media (max-width: 768px) {
-    .info-list {
-        width: auto;
-        justify-content: center;
-        gap: 1rem;
-        margin-bottom: 0.5rem;
+
+@media (max-width: 600px) {
+    .logo {
+        margin: 0;
     }
 
-    .top-bar {
-        height: 120px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .meet-team h2::after {
+        left: 50%;
+        margin-left: 0;
+        transform: translateX(-50%);
+    }
 
+    .container {
+        width: 100%;
+        padding: 0 0.6rem;
+    }
+
+    .info-list {
+        width: 100%;
+        flex-direction: column;
+        align-items: left;
+        gap: 0.5rem;
+        margin: -2.5rem 0 0;
+    }
+
+    .site-nav {
+        width: 100%;
+        display: none;
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    .btn-inner {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
     }
 
     .actions {
         width: 100%;
-        justify-content: center;
-    }
-
-    .nav-container {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
+        align-items: left;
+        gap: 1rem;
     }
 
-    .site-nav ul {
-        justify-content: center;
-        margin-top: 0.5rem;
+    .top-bar {
+        width: 100%;
+        height: auto;
+        padding: 3rem 0.6rem;
+    }
+
+    .background {
+        padding: 0;
+        margin-top: -10px;
     }
 }
 
-@media (max-width: 600px) {
-    .top-bar {
-        display: none;
+
+/* CSS */
+/* 1) Section + container */
+.fB {
+    background-color: #2b2b2b;
+    color: #fff;
+    font-family: Geneva, Verdana, sans-serif;
+    /* dark grey */
+    padding: 3rem 0rem 4rem;
+}
+
+.contact-section .Fcontainer {
+    max-width: 1250px;
+    margin: auto auto;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* 2) Column basics */
+.contact-col {
+    flex: 1;
+}
+
+/* 3) Headings + underline */
+.contact-col h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-col .underline {
+    width: 50px;
+    height: 2px;
+    background-color: #35bdf2;
+    /* accent blue */
+    margin-bottom: 1.5rem;
+}
+
+/* 4) About text */
+.contact-col p {
+    line-height: 1.2;
+    font-size: 0.8rem;
+    margin: 0;
+    width: 80%;
+    color: #efefef;
+}
+
+/* 5) Contact list */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.8rem;
+    margin: 0 0 1.5rem;
+    width: 80%;
+    color: #efefef;
+}
+
+.contact-list li .icon {
+    display: inline-block;
+    width: 1em;
+    font-size: 0.9rem;
+    margin-right: 0.75em;
+    line-height: 1.2;
+}
+
+/* 6) Hours box */
+.hours-box {
+    background-color: #2654a5;
+    /* deep blue */
+    padding: 2rem;
+}
+
+.hours-box h3 {
+    font-style: italic;
+    margin: 0 0 1rem;
+}
+
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+}
+
+.hours-box hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+
+    .fB {
+        padding: 3rem 1rem 4rem;
     }
 
-    .site-nav {
-        display: none;
+    /* 1) Stack the container into a column */
+    .fB .Fcontainer {
+        flex-direction: column;
+        align-items: center;
+        /* center each block horizontally */
+    }
+
+    /* 2) Make each “column” full-width and spaced */
+    .fB .contact-col {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    /* 3) Let your text & lists fill that 100% space */
+    .fB .contact-col p,
+    .fB .contact-list li {
+        width: auto;
+        /* override your 80% width */
+    }
+
+    /* 4) Let the hours-box also go full width */
+    .fB .hours-box {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    /* 5) No extra gap after the last one */
+    .fB .contact-col:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+    background-color: #2b2b2b;
+    color: #fff;
+    font-family: Geneva, Verdana, sans-serif;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+/* left text */
+.footer-left {
+    flex: 1;
+}
+
+/* center nav */
+.footer-nav {
+    flex: 2;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-nav a {
+    color: #efefef;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.footer-nav a:hover {
+    color: #35bdf2;
+}
+
+/* right side */
+.footer-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.footer-right a {
+    color: #efefef;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.footer-right a:hover {
+    color: #35bdf2;
+}
+
+/* optional: give the back-to-top arrow a little background “button” feel */
+.back-to-top {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 4px;
+}
+
+/* ---------- Responsive (stack on small screens) ---------- */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-nav,
+    .footer-right {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .footer-nav ul {
+        justify-content: center;
+    }
+
+    .footer-right {
+        justify-content: center;
+    }
+
+    .back-to-top {
+        margin-left: 0.5rem;
+        /* space between FB icon and arrow */
     }
 }

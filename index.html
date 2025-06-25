@@ -12,10 +12,12 @@
 
     <link rel="icon" href="asset/favicon.ico" type="image/x-icon" />
     <script src="js/app.js"></script>
+    <script src="js/script.js"></script>
 
 </head>
 
 <body>
+
     <header class="top-bar">
         <div class="container">
             <ul class="info-list">
@@ -38,14 +40,16 @@
                 </li>
             </ul>
             <div class="actions">
-                <a href="https://www.medentmobile.com/portal/index.php?practice_id=S6RuH2tY" target="_blank"
-                    rel="noopener noreferrer" class="btn">Patient Portal
-                </a>
-                <a href="https://www.medentlink.com/openedge/guestpay/index.php?practice_id=S6RuH2tY&auth_key=15147750-8015-11eb-9439-0242ac130002"
-                    target="_blank" rel="noopener noreferrer" class="btn">Guest Pay
-                </a>
-                <a href="https://www.facebook.com/Brentwood-Medical-Group-2251847455069374/" target="_blank"
-                    rel="noopener noreferrer" class="social">f</a>
+                <section class="btn-inner">
+                    <a href="https://www.medentmobile.com/portal/index.php?practice_id=S6RuH2tY" target="_blank"
+                        rel="noopener noreferrer" class="btn">Patient Portal
+                    </a>
+                    <a href="https://www.medentlink.com/openedge/guestpay/index.php?practice_id=S6RuH2tY&auth_key=15147750-8015-11eb-9439-0242ac130002"
+                        target="_blank" rel="noopener noreferrer" class="btn">Guest Pay
+                    </a>
+                    <a href="https://www.facebook.com/Brentwood-Medical-Group-2251847455069374/" target="_blank"
+                        rel="noopener noreferrer" class="social">f</a>
+                </section>
             </div>
         </div>
     </header>
@@ -53,8 +57,8 @@
     <header class="main-header">
         <div class="container nav-container">
             <!-- logo on the left -->
-            <a href="index.html" class="logo">
-                <img src="asset/logo-mst.png" alt="Brentwood Medical Group Logo" class="logo-img" />
+            <a href="../index.html" class="logo">
+                <img src="../asset/logo-mst.png" alt="Brentwood Medical Group Logo" class="logo-img" />
             </a>
 
             <!-- nav links on the right -->
@@ -66,91 +70,109 @@
                     <li><a href="other/PatientInfo.html">Patient Information</a></li>
                     <li><a href="other/Services.html">Services</a></li>
                     <li><a href="other/Contact.html">Contact Us</a></li>
-                    <li><a href="asset/npp_fullpage_hc_provider-BMG.pdf" target="_blank">HIPAA Notice</a></li>
+                    <li><a href="other/asset/npp_fullpage_hc_provider-BMG.pdf" target="_blank">HIPAA Notice</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <!-- header                     can be reused end -->
+
     <script src="js/swap.js" defer></script>
-    <div class="image-container">
+    <section class="image-container">
         <img src="asset/image1.png" class="swap-image active" alt="Image 1">
         <img src="asset/image2.png" class="swap-image" alt="Image 2">
-        <div class="caption" id="caption">"Brentwood Medical Group<br>
+        <div class="caption" id="caption">"Brentwood Medical Group
             We provide a variety of medical services to our patients based on their needs."</div>
-    </div>
+    </section>
 
-
-
-    <section class="feature-area">
-        <div class="container">
-            <div class="text-col">
+    <section class="services-section">
+        <div class="Scontainer">
+            <!-- left column -->
+            <div class="services-content">
                 <h2>Brentwood Medical Group Provides the<br>Direct Care Our Patients Need</h2>
-                <p>Since 1938, Brentwood Medical Group has provided our patients with excellence in both inpatient and
-                    outpatient care.</p>
-
-                <ul class="split-list">
-                    <li>Medical Care</li>
-                    <li>Job Physicals</li>
-                    <li>Primary Care</li>
-                    <li>EKG's</li>
-                    <li>Immunizations</li>
-                    <li>Preventative Care</li>
-                    <li>Annual Physicals</li>
-                    <li>Illness Management</li>
+                <p class="lead">
+                    Since 1938, Brentwood Medical Group has provided our patients with excellence in both inpatient and
+                    outpatient care.
+                </p>
+                <ul class="services-list">
+                    <li><span class="check-icon">✔</span> Medical Care</li>
+                    <li><span class="check-icon">✔</span> Job Physicals</li>
+                    <li><span class="check-icon">✔</span> Primary Care</li>
+                    <li><span class="check-icon">✔</span> EKG's</li>
+                    <li><span class="check-icon">✔</span> Immunizations</li>
+                    <li><span class="check-icon">✔</span> Preventative Care</li>
+                    <li><span class="check-icon">✔</span> Annual Physicals</li>
+                    <li><span class="check-icon">✔</span> Illness Management</li>
                 </ul>
             </div>
-
-            <div class="image-col">
-                <img src="asset/hosp.png" alt="pic" />
+            <!-- right column -->
+            <div class="services-image">
+                <img src="asset/hosp.png" alt="Brentwood Medical Group building">
             </div>
         </div>
-        <hr class="section-divider">
     </section>
-    <div class="cta-container">
-        <a href="tel:4128829455" class="cta-btn">
-            Call (412) 882-9455 Schedule Appointment
-        </a>
-        <a href="https://www.google.com/maps/place/Brentwood+Medical+Group/@40.3721954,-79.9756369,15z/data=!4m5!3m4!1s0x0:0xf0b1cdbec4f481ca!8m2!3d40.3721954!4d-79.9756369?shorturl=1"
-            target="_blank" rel="noopener noreferrer" class="cta-btn">
-            Get Directions
-        </a>
-    </div>
-    <hr id="footer-divider">
+    <hr style="border-top: 1px solid #000;">
+
+    <!-- right after </section> of .services-section -->
+    <section class="cta-buttons">
+        <div class="cta-buttons__inner">
+            <a href="tel:+14128829455" class="ctn ctn--primary">
+                Call (412) 882-9455 Schedule Appointment
+            </a>
+            <a href="https://www.google.com/maps/place/Brentwood+Medical+Group/@40.3721954,-79.9756369,15z/data=!4m5!3m4!1s0x0:0xf0b1cdbec4f481ca!8m2!3d40.3721954!4d-79.9756369?shorturl=1"
+                target="_blank" rel="noopener" class="ctn ctn--primary">
+                Get Directions
+            </a>
+        </div>
+    </section>
+
+    <!-- HTML -->
     <section class="testimonial">
         <div class="testimonial-content">
-            <i class="fas fa-quote-left quote-icon"></i>
+            <div class="quote-icon">“</div>
             <p class="quote">
-                “They are a great medical group. Always treats you with respect. Takes the time to listen.
-                I have never had a problem getting in to see someone if an issue suddenly arises.”
+                They are a great medical group. Always treats you with respect.
+                Takes the time to listen. I have never had a problem getting in
+                to see someone when an issue suddenly arises.
             </p>
             <hr class="quote-divider">
-            <p class="author">Barbara Snyder</p>
+            <div class="author">Barbara Snyder</div>
         </div>
     </section>
-    <hr id="footer-divider">
-    `
-    <section class="highlights">
+
+    <hr style="border-top: 1px solid #000;">
+
+
+    <!-- HTML -->
+    <section class="info">
         <div class="container">
-            <div class="highlight">We are an Independent Medical Practice</div>
-            <div class="highlight">We accept UPMC and Highmark Insurance</div>
-            <div class="highlight">We accept Aetna, Cigna, and UnitedHealthcare</div>
+            <div class="info-item">
+                <p>We are an Independent Medical Practice</p>
+            </div>
+            <div class="info-item">
+                <p>We accept UPMC and Highmark Insurance</p>
+            </div>
+            <div class="info-item">
+                <p>We accept Aetna, Cigna, and UnitedHealthcare</p>
+            </div>
         </div>
     </section>
-    <hr id="footer-divider">
+    <hr id="messOne" style="border-top: 1px solid #000;">
 
-
-    <section class="team-section">
-
-        <div class="team-header">
-            <h2>Meet the Team</h2>
-            <br>
-            <div class="section-underline"></div>
-            <p class="section-subtitle">
-                It is the people who make <b style="color:black">BMG</b> what it is and we are extremely proud of the
-                achievements of our staff.
-                We all work together to help our patients through recovery, providing the best possible care.
-            </p>
-        </div>
+    <section class="background">
+        <section class="meet-team">
+            <div class="container">
+                <h2 style="text-align: center; width: 1250px;">Meet the Team</h2>
+                <p style="text-align: center; width: 1250px;">
+                    It is the people who make <strong style="color: #000;">BMG</strong> what it is and we are extremely
+                    proud
+                    of the achievements of our staff.
+                </p>
+                <p style="text-align: center; width: 1250px;">
+                    We all work together to help our patients through recovery, providing the best possible care.
+                </p>
+            </div>
+        </section>
 
         <section class="providers" style="margin-top: 60px;">
             <div class="providers__grid">
@@ -158,10 +180,10 @@
                 <!-- Card 1 -->
                 <div class="provider-card">
                     <a href="scott-carnivale.html" class="provider-card__thumb">
-                        <img src="asset/Scott-C-Dark-One-819x1024.jpg" alt="Scott P. Carnivale, MD, FACP">
+                        <img src="../asset/Scott-C-Dark-One-819x1024.jpg" alt="Scott P. Carnivale, MD, FACP">
                     </a>
                     <h3 class="provider-card__name">
-                        <a href="other/scott-carnivale.html">Scott P. Carnivale, MD, FACP</a>
+                        <a href="scott-carnivale.html">Scott P. Carnivale, MD, FACP</a>
                     </h3>
                     <p class="provider-card__bio">
                         Dr. Carnivale joined Brentwood Medical Group in 1993 when he moved to Pittsburgh.
@@ -174,10 +196,10 @@
                 <!-- Card 2 -->
                 <div class="provider-card">
                     <a href="scott-phillips.html" class="provider-card__thumb">
-                        <img src="asset/Scott-Dark-One-820x1024.jpg" alt="Scott T. Phillips, MD">
+                        <img src="../asset/Scott-Dark-One-820x1024.jpg" alt="Scott T. Phillips, MD">
                     </a>
                     <h3 class="provider-card__name">
-                        <a href="other/scott-phillips.html">Scott T. Phillips, MD</a>
+                        <a href="scott-phillips.html">Scott T. Phillips, MD</a>
                     </h3>
                     <p class="provider-card__bio">
                         Dr. Phillips did his internship and residency in Pittsburgh with UPMC, and is a Board Certified
@@ -191,10 +213,10 @@
                 <!-- Card 3 -->
                 <div class="provider-card">
                     <a href="dushan-majkic.html" class="provider-card__thumb">
-                        <img src="asset/Dushan-Dark-Four-822x1024.jpg" alt="Dushan Majkic, MD">
+                        <img src="../asset/Dushan-Dark-Four-822x1024.jpg" alt="Dushan Majkic, MD">
                     </a>
                     <h3 class="provider-card__name">
-                        <a href="other/dushan-majkic.html">Dushan Majkic, MD</a>
+                        <a href="dushan-majkic.html">Dushan Majkic, MD</a>
                     </h3>
                     <p class="provider-card__bio">
                         Dr. Majkic is a Board Certified Internal Medicine Physician, and joined Brentwood Medical Group
@@ -209,10 +231,10 @@
                 <!-- Card 4 -->
                 <div class="provider-card">
                     <a href="renee-conn.html" class="provider-card__thumb">
-                        <img src="asset/Renee-Dark-Two-726x1024.jpg" alt="Renee Conn, CRNP">
+                        <img src="../asset/Renee-Dark-Two-726x1024.jpg" alt="Renee Conn, CRNP">
                     </a>
                     <h3 class="provider-card__name">
-                        <a href="other/renee-conn.html">Renee Conn, CRNP</a>
+                        <a href="renee-conn.html">Renee Conn, CRNP</a>
                     </h3>
                     <p class="provider-card__bio">
                         Renee joined Brentwood Medical Group in 2020. She has extensive care in critical care nursing.
@@ -223,88 +245,104 @@
                 </div>
 
             </div>
+        </section>
+
+
     </section>
-    </section>
-
-    <button id="backToTop" aria-label="Back to top">↑</button>
 
 
-    <section class="info-section">
-        <div class="container info-grid">
-            <div class="info-block">
-                <h3>About Us</h3>
-                <div class="underline"></div>
-                <p>
-                    Since 1938, Brentwood Medical Group has provided the community of
-                    Pittsburgh, PA with excellence in inpatient and outpatient care.
-                    With loyal physicians who've been working for our medical group for
-                    countless years. Our core mission has always been to ensure that our
-                    patients receive the highest quality care and treatment possible.
-                </p>
-            </div>
+    <!--                                                  fooooooooooooooooteeeeeeeeeeeeeer                                                  -->
+    <section class="fB">
+        <section class="contact-section">
+            <div class="Fcontainer">
+                <!-- About Us -->
+                <div class="contact-col">
+                    <h3>About Us</h3>
+                    <div class="underline"></div>
+                    <p>
+                        Since 1938, Brentwood Medical Group has provided the community of Pittsburgh, PA
+                        with excellence in inpatient and outpatient care. With loyal physicians who’ve been
+                        working for our medical group for countless years, our core mission has always been
+                        to ensure that our patients receive the highest quality care and treatment possible.
+                    </p>
+                </div>
 
-            <div class="info-block">
-                <h3>Get In Touch</h3>
-                <div class="underline"></div>
-                <ul class="contact-list">
-                    <li><i class="fas fa-map-marker-alt"></i>3720 Brownsville Rd<br>Pittsburgh, PA 15227</li>
-                    <li><i class="fas fa-phone"></i><a href="tel:4128829455" target="_blank" rel="noopener noreferrer"
-                            style="text-decoration: none; color: #ffffff;">
-                            (412) 882-9455
-                        </a></li>
-                    <li><i class="fas fa-fax"></i>Fax: (412) 884-6149</li>
-                </ul>
-            </div>
+                <!-- Get In Touch -->
+                <div class="contact-col">
+                    <h3>Get In Touch</h3>
+                    <div class="underline"></div>
+                    <ul class="contact-list">
+                        <li>
+                            <span class="icon">📍</span>
+                            <span>3720 Brownsville Rd<br>Pittsburgh, PA 15227</span>
+                        </li>
+                        <li>
+                            <span class="icon">📞</span>
+                            <span>(412) 882-9455</span>
+                        </li>
+                        <li>
+                            <span class="icon">📠</span>
+                            <span>Fax: (412) 884-6149</span>
+                        </li>
+                    </ul>
+                </div>
 
-            <div class="info-block hours-box">
-                <h3>Hours of Operation</h3>
-                <div class="hours-list">
-                    <div class="hours-row">
-                        <span>Monday - Thursday</span>
-                        <span>8:00 AM - 4:00 PM</span>
-                    </div>
-                    <hr>
-                    <div class="hours-row">
-                        <span>Friday</span>
-                        <span>8:00 AM - 3:00 PM</span>
+                <!-- Hours of Operation -->
+                <div class="contact-col">
+                    <div class="hours-box">
+                        <h3>Hours of Operation</h3>
+                        <div class="hours-row">
+                            <span>Monday - Thursday</span>
+                            <span>8:00 AM - 4:00 PM</span>
+                        </div>
+                        <hr>
+                        <div class="hours-row">
+                            <span>Friday</span>
+                            <span>8:00 AM - 3:00 PM</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </section>
-    <!-- Footer -->
-    <section class="site-footer">
+    <footer class="site-footer">
         <div class="footer-container">
+            <!-- left side -->
             <div class="footer-left">
                 © 2019 Brentwood Medical Group. All rights reserved.
             </div>
+
+            <!-- center nav -->
             <nav class="footer-nav">
-                <a href="index.html" style="text-decoration: none; color: #ffffff;">Home</a>
-                <a href="other/abtUs.html" style="text-decoration: none; color: #ffffff;">About</a>
-                <a href="other/meetTeam.html" style="text-decoration: none; color: #ffffff;">Meet Our Team</a>
-                <a href="other/Services.html" style="text-decoration: none; color: #ffffff;">Services</a>
-                <a href="other/PatientInfo.html" style="text-decoration: none; color: #ffffff;">Patient Information</a>
-                <a href="other/Contact.html" style="text-decoration: none; color: #ffffff;">Contact Us</a>
-                <a href="https://www.medentmobile.com/portal/index.php?practice_id=S6RuH2tY"
-                    style="text-decoration: none; color: #ffffff;">Patient Portal</a>
-                <a href="https://www.medentlink.com/openedge/guestpay/index.php?practice_id=S6RuH2tY&auth_key=15147750-8015-11eb-9439-0242ac130002"
-                    style="text-decoration: none; color: #ffffff;">Guest
-                    Pay</a>
-                <a href="asset/npp_fullpage_hc_provider-BMG.pdf" target="_blank"
-                    style="text-decoration: none; color: #ffffff;">HIPAA Notice</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="other/abtUs.html">About</a></li>
+                    <li><a href="other/meetTeam.html">Meet Our Team</a></li>
+                    <li><a href="other/Services.html">Services</a></li>
+                    <li><a href="other/PatientInfo.html">Patient Information</a></li>
+                    <li><a href="other/Contact.html">Contact Us</a></li>
+                    <li><a href="https://www.medentmobile.com/portal/index.php?practice_id=S6RuH2tY" target="_blank"
+                        rel="noopener noreferrer">Patient Portal</li>
+                    <li><a href="https://www.medentlink.com/openedge/guestpay/index.php?practice_id=S6RuH2tY&auth_key=15147750-8015-11eb-9439-0242ac130002"
+                        target="_blank" rel="noopener noreferrer">Guest PayGuest Pay</a></li>
+                    <li><a href="other/asset/npp_fullpage_hc_provider-BMG.pdf" target="_blank">HIPAA Notice</a></li>
+                </ul>
             </nav>
+
+            <!-- right side: social + back to top -->
             <div class="footer-right">
-                <a href="https://www.facebook.com/Brentwood-Medical-Group-2251847455069374/" target="_blank"
-                    rel="noopener" style="text-decoration: none; color: #ffffff;">
+                <a href="https://facebook.com/YourPage" class="social-link" target="_blank" aria-label="Facebook">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="#" class="scroll-top">
+                <a href="#top" class="back-to-top" aria-label="Back to top">
                     <i class="fas fa-chevron-up"></i>
                 </a>
             </div>
+            <a href="#" class="scroll-top">
+                    <i class="fas fa-chevron-up"></i>
+                </a>
         </div>
-    </section>
-
+    </footer>
 
 </body>
 
