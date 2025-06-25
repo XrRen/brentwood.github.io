@@ -408,7 +408,7 @@
 
 .testimonial {
     position: relative;
-    background-image: url('/asset/slide2.jpg');
+    background-image: url('asset/slide2.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
