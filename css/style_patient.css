@@ -2,6 +2,35 @@
     font-family: Geneva, Verdana, sans-serif;
 }
 
+/* 1) Reset default margins and make box-sizing safer */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* 2) Contain your hero image in the normal flow (no scrollbar bleed) */
+.hero-banner {
+    width: 100%;
+    /* was 100vw */
+    height: 55vh;
+    /* …the rest of your existing rules… */
+}
+
+/* 3) Make sure no images sneak out at full-size */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
 .hero-banner {
     width: 100vw;
     /* full viewport width */
