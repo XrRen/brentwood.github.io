@@ -1,3 +1,6 @@
+*{
+    font-family: Geneva, Verdana, sans-serif;
+}
 .hero-banner {
     width: 100vw;
     /* full viewport width */
@@ -70,7 +73,6 @@
     padding: 3rem 1rem 4rem;
     /* same side gutters */
     display: flex;
-    gap: 1rem;
     /* space between the two buttons */
     flex-wrap: wrap;
     /* stacks on narrow screens */
@@ -100,31 +102,6 @@
 .stn--primary:focus {
     background: #244e7d;
 }
-
-@media (max-width: 1024px) {
-    .hero-banner {
-        height: 40vh;
-    }
-    .section-title {
-        font-size: 1.75rem;
-    }
-    .team-section p {
-        font-size: 1.1rem;
-    }
-    .providers__grid {
-        gap: 0.75rem;
-    }
-    .provider-card__name {
-        font-size: 0.9rem;
-    }
-    .provider-card__bio {
-        font-size: 0.75rem;
-    }
-    .provider-card__thumb img {
-        height: 100%;
-    }
-}
-
 @media (max-width: 768px) {
     .hero-banner {
         height: 30vh;
@@ -132,16 +109,14 @@
     .team-section {
         padding: 0 1rem;
     }
-    .providers__grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
     .cta-buttons__inner {
         flex-direction: column;
         align-items: stretch;
+        gap: 4rem;
     }
     .stn {
         font-size: 1rem;
-        padding: 0.75rem 0;
+        padding: 1rem 0.5rem;
     }
 }
 

@@ -1,21 +1,19 @@
+*{
+    font-family: Geneva, Verdana, sans-serif;
+}
 .hero-banner {
+    width: 100vw;
+    /* full viewport width */
+    height: 55vh;
+    /* pick a height: 60% of viewport height */
+    background-image: url("../asset/meet.png");
+    background-size: cover;
+    /* scale & crop to fill */
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(1px 3px 6px black);
     position: relative;
     z-index: -1;
-    background-image: url('../asset/abtUs.png');
-    background-position: 50% 75%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    /* show the full photo, no cropping */
-
-    /* pick an explicit height (px, %, or vh) */
-    min-height: 420px;
-    /* or max-height: 50vh; */
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -130px;
-    filter: drop-shadow(1px 3px 6px black);
 }
 
 .prep-section {
@@ -276,18 +274,11 @@
     color: #2F5790;
     font-size: 0.8em;
 }
-@media (max-width: 1024px) {
-    .hero-banner { min-height: 300px; margin-top: -80px; }
-    .section-title { font-size: 1.75rem; }
-    .team-section p { font-size: 1.1rem; }
-    .prep-text { font-size: 1.3rem; }
-    .providers__grid { gap: 0.75rem; }
-    .provider-card__name { font-size: 0.9rem; }
-    .provider-card__bio { font-size: 0.8rem; }
-}
 
 @media (max-width: 768px) {
-    .hero-banner { min-height: 250px; margin-top: 0; }
+    .hero-banner {
+        height: 30vh;
+    }
     .prep-inner { flex-direction: column; }
     .prep-left, .prep-right { flex: 1 1 auto; }
     .patient-billing-section { grid-template-columns: 1fr; }
@@ -298,7 +289,9 @@
 }
 
 @media (max-width: 480px) {
-    .hero-banner { min-height: 200px; }
+    .hero-banner {
+        height: 25vh;
+    }
     .section-title { font-size: 1.5rem; bottom: -10px; }
     .team-section p { font-size: 1rem; line-height: 1.4; }
     .prep-text { font-size: 1.1rem; }

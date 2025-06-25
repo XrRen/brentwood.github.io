@@ -16,6 +16,7 @@
 <!-- header                     can be reused  -->
 
 <body>
+
     <header class="top-bar">
         <div class="container">
             <ul class="info-list">
@@ -38,14 +39,16 @@
                 </li>
             </ul>
             <div class="actions">
-                <a href="https://www.medentmobile.com/portal/index.php?practice_id=S6RuH2tY" target="_blank"
-                    rel="noopener noreferrer" class="btn">Patient Portal
-                </a>
-                <a href="https://www.medentlink.com/openedge/guestpay/index.php?practice_id=S6RuH2tY&auth_key=15147750-8015-11eb-9439-0242ac130002"
-                    target="_blank" rel="noopener noreferrer" class="btn">Guest Pay
-                </a>
-                <a href="https://www.facebook.com/Brentwood-Medical-Group-2251847455069374/" target="_blank"
-                    rel="noopener noreferrer" class="social">f</a>
+                <section class="btn-inner">
+                    <a href="https://www.medentmobile.com/portal/index.php?practice_id=S6RuH2tY" target="_blank"
+                        rel="noopener noreferrer" class="btn">Patient Portal
+                    </a>
+                    <a href="https://www.medentlink.com/openedge/guestpay/index.php?practice_id=S6RuH2tY&auth_key=15147750-8015-11eb-9439-0242ac130002"
+                        target="_blank" rel="noopener noreferrer" class="btn">Guest Pay
+                    </a>
+                    <a href="https://www.facebook.com/Brentwood-Medical-Group-2251847455069374/" target="_blank"
+                        rel="noopener noreferrer" class="social">f</a>
+                </section>
             </div>
         </div>
     </header>
@@ -57,15 +60,19 @@
                 <img src="../asset/logo-mst.png" alt="Brentwood Medical Group Logo" class="logo-img" />
             </a>
 
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars">☰</i>
+            </button>
+
             <!-- nav links on the right -->
             <nav class="site-nav">
                 <ul>
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="../other/abtUs.html">About Us</a></li>
-                    <li><a href="../other/meetTeam.html">Meet Our Team</a></li>
-                    <li><a href="../other/PatientInfo.html">Patient Information</a></li>
-                    <li><a href="../other/Services.html">Services</a></li>
-                    <li><a href="../other/Contact.html">Contact Us</a></li>
+                    <li><a href="abtUs.html">About Us</a></li>
+                    <li><a href="meetTeam.html">Meet Our Team</a></li>
+                    <li><a href="PatientInfo.html">Patient Information</a></li>
+                    <li><a href="Services.html" class="current">Services</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
                     <li><a href="../asset/npp_fullpage_hc_provider-BMG.pdf" target="_blank">HIPAA Notice</a></li>
                 </ul>
             </nav>
@@ -92,7 +99,7 @@
 
     <hr class="divider">
 
-    <section class="services-section">
+    <section class="services-sectionS">
         <!-- Left column -->
         <div class="services-col">
             <h3>Our Services</h3>
@@ -127,7 +134,7 @@
                 <li>Joint injections</li>
                 <li>Biopsies</li>
             </ul>
-            <img src="../asset/Depositphotos_44861127_l-2015-new.jpg" alt="Minor surgical sutures" class="services-img" style="width: 695px;">
+            <img src="../asset/Depositphotos_44861127_l-2015-new.jpg" alt="Minor surgical sutures" class="services-img">
         </div>
     </section>
     <hr class="divider" style="border-top: 2px solid #000;">
@@ -144,85 +151,121 @@
         </div>
     </section>
     <button id="backToTop" aria-label="Back to top">↑</button>
-    <!-- footer                     can be reused start -->
-    <section class="info-section">
-        <div class="container info-grid">
-            <div class="info-block">
-                <h3>About Us</h3>
-                <div class="underline"></div>
-                <p>
-                    Since 1938, Brentwood Medical Group has provided the community of
-                    Pittsburgh, PA with excellence in inpatient and outpatient care.
-                    With loyal physicians who've been working for our medical group for
-                    countless years. Our core mission has always been to ensure that our
-                    patients receive the highest quality care and treatment possible.
-                </p>
-            </div>
+    <section class="fB">
+        <section class="contact-section">
+            <div class="Fcontainer">
+                <!-- About Us -->
+                <div class="contact-col">
+                    <h3>About Us</h3>
+                    <div class="underline"></div>
+                    <p>
+                        Since 1938, Brentwood Medical Group has provided the community of Pittsburgh, PA
+                        with excellence in inpatient and outpatient care. With loyal physicians who’ve been
+                        working for our medical group for countless years, our core mission has always been
+                        to ensure that our patients receive the highest quality care and treatment possible.
+                    </p>
+                </div>
 
-            <div class="info-block">
-                <h3>Get In Touch</h3>
-                <div class="underline"></div>
-                <ul class="contact-list">
-                    <li><i class="fas fa-map-marker-alt"></i>3720 Brownsville Rd<br>Pittsburgh, PA 15227</li>
-                    <li><i class="fas fa-phone"></i><a href="tel:4128829455" target="_blank" rel="noopener noreferrer"
-                            style="text-decoration: none; color: #ffffff;">
-                            (412) 882-9455
-                        </a></li>
-                    <li><i class="fas fa-fax"></i>Fax: (412) 884-6149</li>
-                </ul>
-            </div>
+                <!-- Get In Touch -->
+                <div class="contact-col">
+                    <h3>Get In Touch</h3>
+                    <div class="underline"></div>
+                    <ul class="contact-list">
+                        <li>
+                            <span class="icon">📍</span>
+                            <span>3720 Brownsville Rd<br>Pittsburgh, PA 15227</span>
+                        </li>
+                        <li>
+                            <span class="icon">📞</span>
+                            <span>(412) 882-9455</span>
+                        </li>
+                        <li>
+                            <span class="icon">📠</span>
+                            <span>Fax: (412) 884-6149</span>
+                        </li>
+                    </ul>
+                </div>
 
-            <div class="info-block hours-box"> <!-- trbl-->
-                <h3>Hours of Operation</h3>
-                <div class="hours-list">
-                    <div class="hours-row">
-                        <span>Monday - Thursday</span>
-                        <span>8:00 AM - 4:00 PM</span>
-                    </div>
-                    <hr>
-                    <div class="hours-row">
-                        <span>Friday</span>
-                        <span>8:00 AM - 3:00 PM</span>
+                <!-- Hours of Operation -->
+                <div class="contact-col">
+                    <div class="hours-box">
+                        <h3>Hours of Operation</h3>
+                        <div class="hours-row">
+                            <span>Monday - Thursday</span>
+                            <span>8:00 AM - 4:00 PM</span>
+                        </div>
+                        <hr>
+                        <div class="hours-row">
+                            <span>Friday</span>
+                            <span>8:00 AM - 3:00 PM</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </section>
-    <!-- Footer -->
-    <section class="site-footer">
+    <footer class="site-footer">
         <div class="footer-container">
+            <!-- left side -->
             <div class="footer-left">
-                © 2019 Brentwood Medical Group. All rights reserved.
+                © 2019 <strong style="color: #ffffff;"> Brentwood Medical Group</strong>. All rights reserved.
             </div>
-            <nav class="footer-nav">
-                <a href="../index.html" style="text-decoration: none; color: #ffffff;">Home</a>
-                <a href="abtUs.html" style="text-decoration: none; color: #ffffff;">About</a>
-                <a href="meetTeam.html" style="text-decoration: none; color: #ffffff;">Meet Our Team</a>
-                <a href="Services.html" style="text-decoration: none; color: #ffffff;">Services</a>
-                <a href="PatientInfo.html" style="text-decoration: none; color: #ffffff;">Patient Information</a>
-                <a href="Contact.html" style="text-decoration: none; color: #ffffff;">Contact Us</a>
-                <a href="https://www.medentmobile.com/portal/index.php?practice_id=S6RuH2tY"
-                    style="text-decoration: none; color: #ffffff;">Patient Portal</a>
-                <a href="https://www.medentlink.com/openedge/guestpay/index.php?practice_id=S6RuH2tY&auth_key=15147750-8015-11eb-9439-0242ac130002"
-                    style="text-decoration: none; color: #ffffff;">Guest
-                    Pay</a>
-                <a href="../asset/npp_fullpage_hc_provider-BMG.pdf" target="_blank"
-                    style="text-decoration: none; color: #ffffff;">HIPAA Notice</a>
-            </nav>
-            <div class="footer-right">
-                <a href="https://www.facebook.com/Brentwood-Medical-Group-2251847455069374/" target="_blank"
-                    rel="noopener" style="text-decoration: none; color: #ffffff;">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="scroll-top">
-                    <i class="fas fa-chevron-up"></i>
-                </a>
+
+            <!-- center nav -->
+            <div class="footer-center">
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="abtUs.html">About</a></li>
+                        <li><a href="meetTeam.html">Meet Our Team</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="PatientInfo.html">Patient Information</a></li>
+                        <li><a href="Contact.html">Contact Us</a></li>
+                        <li><a href="https://www.medentmobile.com/portal/index.php?practice_id=S6RuH2tY" target="_blank"
+                                rel="noopener noreferrer">Patient Portal</li>
+                        <li><a href="https://www.medentlink.com/openedge/guestpay/index.php?practice_id=S6RuH2tY&auth_key=15147750-8015-11eb-9439-0242ac130002"
+                                target="_blank" rel="noopener noreferrer">Guest PayGuest Pay</a></li>
+                        <li><a href="../asset/npp_fullpage_hc_provider-BMG.pdf" target="_blank">HIPAA Notice</a></li>
+                    </ul>
+                </nav>
+                <br>
+                <!-- right side: social + back to top -->
+                <div class="footer-right">
+                    <a href="https://www.facebook.com/Brentwood-Medical-Group-2251847455069374/" target="_blank"
+                        rel="noopener" style="text-decoration: none; color: #ffffff;">
+                        <i class="fab fa-facebook-f">f</i>
+                    </a>
+                    <a href="#" class="scroll-top">
+                        <i class="fas fa-chevron-up"></i>
+                    </a>
+                </div>
             </div>
         </div>
-    </section>
+    </footer>
+    <script>
+        const btn = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.site-nav');
+
+        // 1) toggle open/close when the burger is clicked
+        btn.addEventListener('click', (e) => {
+            nav.classList.toggle('active');
+            e.stopPropagation(); // prevent this click from bubbling to the document listener
+        });
+
+        // 2) close the menu when clicking anywhere else
+        document.addEventListener('click', (e) => {
+            // if menu is open and click is outside both the nav and the toggle…
+            if (
+                nav.classList.contains('active') &&
+                !nav.contains(e.target) &&
+                !btn.contains(e.target)
+            ) {
+                nav.classList.remove('active');
+            }
+        });
+    </script>
 
 
-    <!-- footer                     can be reused end -->
 </body>
 
 </html>

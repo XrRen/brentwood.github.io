@@ -192,6 +192,7 @@
     /* fixed height as required */
     overflow: hidden;
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    z-index: -1;
 
 }
 
@@ -781,6 +782,9 @@ html {
 
 
 @media (max-width: 600px) {
+    .info-list {
+        font-size: 1rem;
+    }
     .logo {
         margin: 0;
     }
@@ -845,7 +849,7 @@ html {
     color: #fff;
     font-family: Geneva, Verdana, sans-serif;
     /* dark grey */
-    padding: 3rem 0rem 4rem;
+    padding: 1rem 0rem 2rem;
 }
 
 .contact-section .Fcontainer {
@@ -972,17 +976,16 @@ html {
     }
 }
 
-/* ---------- Footer ---------- */
 .site-footer {
-    background-color: #2b2b2b;
-    color: #fff;
+    background-color: #000000;
+    color: #e0e0e0;
     font-family: Geneva, Verdana, sans-serif;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 1rem 0;
     font-size: 0.9rem;
 }
 
 .footer-container {
-    max-width: 1250px;
+    max-width: 1480px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -992,12 +995,14 @@ html {
 
 /* left text */
 .footer-left {
-    flex: 1;
+    flex: 3;
+    font-size: 0.75rem;
 }
 
 /* center nav */
 .footer-nav {
-    flex: 2;
+    flex: 9;
+
 }
 
 .footer-nav ul {
@@ -1013,7 +1018,6 @@ html {
 .footer-nav a {
     color: #efefef;
     text-decoration: none;
-    transition: color .2s;
 }
 
 .footer-nav a:hover {
@@ -1029,17 +1033,15 @@ html {
 }
 
 .footer-right a {
-    color: #efefef;
+    color: #dbdbdb;
     font-size: 1.1rem;
     text-decoration: none;
-    transition: color .2s;
 }
 
 .footer-right a:hover {
     color: #35bdf2;
 }
 
-/* optional: give the back-to-top arrow a little background “button” feel */
 .back-to-top {
     display: inline-flex;
     align-items: center;
@@ -1050,8 +1052,45 @@ html {
     border-radius: 4px;
 }
 
-/* ---------- Responsive (stack on small screens) ---------- */
+.footer-center {
+
+    flex: 9;
+    /* same as before */
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-right: 4rem;
+}
+
+
+
+.footer-center .footer-right {
+    display: flex;
+    gap: 1rem;
+}
+
 @media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left,
+    .footer-center {
+        margin-bottom: 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .footer-center {
+        margin: 0;
+    }
+
+    .site-footer {
+        font-size: 0.5rem;
+    }
+
     .footer-container {
         flex-direction: column;
         align-items: center;
@@ -1061,20 +1100,90 @@ html {
     .footer-left,
     .footer-nav,
     .footer-right {
-        width: 100%;
-        margin-bottom: 1rem;
+        margin: 0;
     }
 
     .footer-nav ul {
         justify-content: center;
     }
 
-    .footer-right {
-        justify-content: center;
-    }
 
     .back-to-top {
         margin-left: 0.5rem;
         /* space between FB icon and arrow */
+    }
+}
+
+/* 1. Hide the toggle on desktop, show on mobile */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #000000;
+    /* or whatever contrast color you like */
+    cursor: pointer;
+    font-family: Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 768px) {
+    .site-nav.active {
+        background-color: #65cccc;
+    }
+
+    /* and each link… */
+    .site-nav.active li a {
+        background-color: #65cccc;
+    }
+
+    /* 2. On mobile: show the toggle, hide the nav by default */
+    .nav-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .site-nav {
+        display: none;
+        width: 100%;
+        z-index: 10;
+    }
+
+    /* 3. When nav is active, show it as a vertical list */
+    .site-nav.active {
+        display: flex;
+        /* match your header color */
+        gap: 0;
+        margin-left: 14rem;
+        text-align: right;
+    }
+
+    .site-nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 0;
+    }
+
+    .site-nav li a {
+        display: block;
+        padding: 0.75rem 1rem;
+        border-top: 1px solid #60d0cb;
+    }
+
+    /* 4. Reset any desktop‐only margins on the logo */
+    .logo {
+        margin: 0;
+        padding: 0.5rem 0;
+    }
+
+    .site-nav li a.current {
+        background-color: var(--color-secondary);
+        /* or whatever accent */
+        border-bottom: 3px solid #35bdf2;
+    }
+
+    .site-nav li a.current {
+        background-color: #006699;
+        /* original nav blue */
+        border-bottom: 3px solid var(--color-secondary);
     }
 }

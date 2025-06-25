@@ -1,7 +1,10 @@
+*{
+    font-family: Geneva, Verdana, sans-serif;
+}
 .hero-banner {
     width: 100vw;
     /* full viewport width */
-    height: 30vh;
+    height: 55vh;
     /* pick a height: 60% of viewport height */
     background-image: url("../asset/meet.png");
     background-size: cover;
@@ -12,6 +15,8 @@
     position: relative;
     z-index: -1;
 }
+
+/* in style_service.css */
 
 /* thin black divider lines */
 .divider {
@@ -42,7 +47,7 @@
     margin: 0.7rem auto 0
 }
 
-.services-section {
+.services-sectionS {
     font-family: Geneva, Verdana, sans-serif;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -52,7 +57,7 @@
     padding: 0 1rem;
 }
 
-.services-section h3 {
+.services-sectionS h3 {
     font-size: 1.5rem;
     margin-bottom: 1.2rem;
 }
@@ -93,10 +98,17 @@
 /* The right-column image */
 .services-img {
     display: block;
-    width: 100%;
-    height: auto;
+    width: 695px;
+    height: 480px;
     margin-top: 1rem;
     border: #f1f1f1 6px solid;
+    background-position: center center;
+    position: relative;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: -1;
 }
 
 .sta-buttons {
@@ -142,37 +154,6 @@
     background: #244e7d;
 }
 
-@media (max-width: 1024px) {
-    .hero-banner {
-        height: 40vh;
-    }
-
-    .services-overview__title {
-        font-size: 1.3rem;
-    }
-
-    .services-overview__text {
-        font-size: 1rem;
-    }
-
-    .services-section {
-        gap: 1.5rem;
-    }
-
-    .service-list li {
-        font-size: 1rem;
-        padding-left: 2.5rem;
-    }
-
-    .sta-buttons__inner {
-        padding: 2rem 1rem 3rem;
-    }
-
-    .stn {
-        font-size: 1rem;
-        padding: 0.9rem 0;
-    }
-}
 
 /* Tablets & small desktops */
 @media (max-width: 768px) {
@@ -184,12 +165,14 @@
         padding: 0 1rem;
     }
 
-    .services-section {
+    .services-sectionS {
         grid-template-columns: 1fr;
     }
 
     .services-img {
         margin-top: 0.5rem;
+        width: 50%;
+        height: 50%;
     }
 
     .sta-buttons__inner {
@@ -206,9 +189,14 @@
 /* Mobile phones */
 @media (max-width: 480px) {
     .hero-banner {
-        height: 255vh;
+        height: 25vh;
     }
+    .services-img
+    {
+        width: 100%;
+        height: 50%;
 
+    }
     .services-overview__title {
         font-size: 1.1rem;
         margin-bottom: 0.5rem;

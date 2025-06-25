@@ -19,6 +19,7 @@
 <!-- header                     can be reused  -->
 
 <body>
+
     <header class="top-bar">
         <div class="container">
             <ul class="info-list">
@@ -41,14 +42,16 @@
                 </li>
             </ul>
             <div class="actions">
-                <a href="https://www.medentmobile.com/portal/index.php?practice_id=S6RuH2tY" target="_blank"
-                    rel="noopener noreferrer" class="btn">Patient Portal
-                </a>
-                <a href="https://www.medentlink.com/openedge/guestpay/index.php?practice_id=S6RuH2tY&auth_key=15147750-8015-11eb-9439-0242ac130002"
-                    target="_blank" rel="noopener noreferrer" class="btn">Guest Pay
-                </a>
-                <a href="https://www.facebook.com/Brentwood-Medical-Group-2251847455069374/" target="_blank"
-                    rel="noopener noreferrer" class="social">f</a>
+                <section class="btn-inner">
+                    <a href="https://www.medentmobile.com/portal/index.php?practice_id=S6RuH2tY" target="_blank"
+                        rel="noopener noreferrer" class="btn">Patient Portal
+                    </a>
+                    <a href="https://www.medentlink.com/openedge/guestpay/index.php?practice_id=S6RuH2tY&auth_key=15147750-8015-11eb-9439-0242ac130002"
+                        target="_blank" rel="noopener noreferrer" class="btn">Guest Pay
+                    </a>
+                    <a href="https://www.facebook.com/Brentwood-Medical-Group-2251847455069374/" target="_blank"
+                        rel="noopener noreferrer" class="social">f</a>
+                </section>
             </div>
         </div>
     </header>
@@ -56,19 +59,23 @@
     <header class="main-header">
         <div class="container nav-container">
             <!-- logo on the left -->
-            <a href="../index.html/" class="logo">
+            <a href="../index.html" class="logo">
                 <img src="../asset/logo-mst.png" alt="Brentwood Medical Group Logo" class="logo-img" />
             </a>
+
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars">☰</i>
+            </button>
 
             <!-- nav links on the right -->
             <nav class="site-nav">
                 <ul>
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="abtUs.html">About Us</a></li>
-                    <li><a href="meetTeam.html">Meet Our Team</a></li>
+                    <li><a href="meetTeam.html" class="current">Meet Our Team</a></li>
                     <li><a href="PatientInfo.html">Patient Information</a></li>
                     <li><a href="Services.html">Services</a></li>
-                    <li><a href="Contact.html">Contact Us</a></li>
+                    <li><a href="Contact.html" >Contact Us</a></li>
                     <li><a href="../asset/npp_fullpage_hc_provider-BMG.pdf" target="_blank">HIPAA Notice</a></li>
                 </ul>
             </nav>
@@ -125,42 +132,70 @@
 
 
 
-    <!-- footer                     can be reused start -->
-    <!-- Footer -->
-    <section class="site-footer">
+    <button id="backToTop" aria-label="Back to top">↑</button>
+    <!--                                                  fooooooooooooooooteeeeeeeeeeeeeer                                                  -->
+    <footer class="site-footer">
         <div class="footer-container">
+            <!-- left side -->
             <div class="footer-left">
-                © 2019 Brentwood Medical Group. All rights reserved.
+                © 2019 <strong style="color: #ffffff;"> Brentwood Medical Group</strong>. All rights reserved.
             </div>
-            <nav class="footer-nav">
-                <a href="../index.html" style="text-decoration: none; color: #ffffff;">Home</a>
-                <a href="abtUs.html" style="text-decoration: none; color: #ffffff;">About</a>
-                <a href="meetTeam.html" style="text-decoration: none; color: #ffffff;">Meet Our Team</a>
-                <a href="Services.html" style="text-decoration: none; color: #ffffff;">Services</a>
-                <a href="PatientInfo.html" style="text-decoration: none; color: #ffffff;">Patient Information</a>
-                <a href="Contact.html" style="text-decoration: none; color: #ffffff;">Contact Us</a>
-                <a href="https://www.medentmobile.com/portal/index.php?practice_id=S6RuH2tY"
-                    style="text-decoration: none; color: #ffffff;">Patient Portal</a>
-                <a href="https://www.medentlink.com/openedge/guestpay/index.php?practice_id=S6RuH2tY&auth_key=15147750-8015-11eb-9439-0242ac130002"
-                    style="text-decoration: none; color: #ffffff;">Guest
-                    Pay</a>
-                <a href="../asset/npp_fullpage_hc_provider-BMG.pdf" target="_blank"
-                    style="text-decoration: none; color: #ffffff;">HIPAA Notice</a>
-            </nav>
-            <div class="footer-right">
-                <a href="https://www.facebook.com/Brentwood-Medical-Group-2251847455069374/" target="_blank"
-                    rel="noopener" style="text-decoration: none; color: #ffffff;">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="scroll-top">
-                    <i class="fas fa-chevron-up"></i>
-                </a>
+
+            <!-- center nav -->
+            <div class="footer-center">
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="abtUs.html">About</a></li>
+                        <li><a href="meetTeam.html">Meet Our Team</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="PatientInfo.html">Patient Information</a></li>
+                        <li><a href="Contact.html">Contact Us</a></li>
+                        <li><a href="https://www.medentmobile.com/portal/index.php?practice_id=S6RuH2tY" target="_blank"
+                                rel="noopener noreferrer">Patient Portal</li>
+                        <li><a href="https://www.medentlink.com/openedge/guestpay/index.php?practice_id=S6RuH2tY&auth_key=15147750-8015-11eb-9439-0242ac130002"
+                                target="_blank" rel="noopener noreferrer">Guest PayGuest Pay</a></li>
+                        <li><a href="../asset/npp_fullpage_hc_provider-BMG.pdf" target="_blank">HIPAA Notice</a></li>
+                    </ul>
+                </nav>
+                <br>
+                <!-- right side: social + back to top -->
+                <div class="footer-right">
+                    <a href="https://www.facebook.com/Brentwood-Medical-Group-2251847455069374/" target="_blank"
+                        rel="noopener" style="text-decoration: none; color: #ffffff;">
+                        <i class="fab fa-facebook-f">f</i>
+                    </a>
+                    <a href="#" class="scroll-top">
+                        <i class="fas fa-chevron-up"></i>
+                    </a>
+                </div>
             </div>
         </div>
-    </section>
+    </footer>
+    <script>
+        const btn = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.site-nav');
+
+        // 1) toggle open/close when the burger is clicked
+        btn.addEventListener('click', (e) => {
+            nav.classList.toggle('active');
+            e.stopPropagation(); // prevent this click from bubbling to the document listener
+        });
+
+        // 2) close the menu when clicking anywhere else
+        document.addEventListener('click', (e) => {
+            // if menu is open and click is outside both the nav and the toggle…
+            if (
+                nav.classList.contains('active') &&
+                !nav.contains(e.target) &&
+                !btn.contains(e.target)
+            ) {
+                nav.classList.remove('active');
+            }
+        });
+    </script>
 
 
-    <!-- footer                     can be reused end -->
 </body>
 
 </html>
